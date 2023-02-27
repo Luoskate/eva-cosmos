@@ -467,3 +467,6 @@ crashlytics-build.properties
 *DontShipIt*/
 # Burst
 *DoNotShip*/
+
+# Meta XR Simulator
+imgui.ini
