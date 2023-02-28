@@ -2638,7 +2638,7 @@ MonoBehaviour:
     iconFileName: {fileID: 4900000, guid: 7dcdd9b8cf6adab44a8ad0ff7e2ecda1, type: 3}
   _importPrefabs:
     model3dPrefab: {fileID: 9102889000339836445, guid: 0a6feb610b556eb40aed5e0eba3b5a03, type: 3}
-    imagePrefab: {fileID: 0}
+    imagePrefab: {fileID: 9102889000339836445, guid: fb3e5b3c57a86b343b8114e0cffcee59, type: 3}
     soundPrefab: {fileID: 0}
     videoPrefab: {fileID: 0}
     video360Prefab: {fileID: 0}

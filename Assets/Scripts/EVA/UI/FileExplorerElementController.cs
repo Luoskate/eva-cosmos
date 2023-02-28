@@ -1,4 +1,5 @@
 using System.IO;
+using System.Threading.Tasks;
 using TMPro;
 using Unity.VectorGraphics;
 using UnityEngine;
@@ -73,14 +74,22 @@ namespace EVA.UI {
         /// Otherwise, it will import the file (using <see cref="FileExplorerManager.Import" />).
         /// </summary>
         public void OnClick() {
-            Debug.Log($"[{GetType().Name}] OnClick()");
-            /// Opens the folder if the current directory is a directory.
+            // Opens the folder if the current directory is a directory.
             if (IsDirectory) {
                 FileExplorerController.OpenFolder(FileSystemInfo.Name);
                 return;
             }
 
-            FileExplorerController.FileExplorerManager.Import((FileInfo)FileSystemInfo);
+            Task<bool> importTask = FileExplorerController.FileExplorerManager.Import(FileSystemInfo.FullName);
+            _ = importTask.ContinueWith((Task<bool> t) => {
+                if (t.Result) {
+                    Debug.Log($"[{GetType().Name}] OnClick() | Successfully imported: {FileSystemInfo.FullName}");
+                } else {
+                    Debug.LogWarning(
+                        $"[{GetType().Name}] OnClick() | Error while importing: {FileSystemInfo.FullName}");
+                }
+            });
+
             FindObjectOfType<EventSystem>().SetSelectedGameObject(null);
         }
         #endregion Methods

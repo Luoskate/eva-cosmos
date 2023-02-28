@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using System.IO;
-using GLTFast;
+using System.Threading.Tasks;
+using EVA.Import;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -40,6 +40,7 @@ namespace EVA.UI {
         public Dictionary<string, string> FileNameDefinitions { get; private set; }
         #endregion Properties
 
+        #region Methods
         private void Start() {
             IconDefinitions = JsonConvert.DeserializeObject<Dictionary<string, string>>(
                 _iconDefinition.iconAssociation.text);
@@ -54,27 +55,36 @@ namespace EVA.UI {
             Debug.Log($"[{GetType().Name}] Start() | Initialized {IconDefinitions.Count} icons");
         }
 
-
         /// <summary>
         /// Imports a file into the scene.
         /// </summary>
         /// <remarks>
-        /// Currently supported formats:
+        /// Currently supported extensions are:
         /// <list type="bullet">
         /// <item><description>.glb</description></item>
         /// <item><description>.gltf</description></item>
+        /// <item><description>.png</description></item>
+        /// <item><description>.jpg</description></item>
+        /// <item><description>.jpeg</description></item>
         /// </list>
         /// </remarks>
-        /// <param name="file">The file to import.</param>
-        public void Import(FileInfo file) {
-            Debug.Log($"[{GetType().Name}] Import({file})");
-            if (file.Extension is ".gltf" or ".glb") {
+        /// <param name="url">The file to import.</param>
+        public async Task<bool> Import(string url) {
+            string extension = url.Split('.')[^1];
+
+            if (extension is "gltf" or "glb") {
                 GameObject prefab = Instantiate(_importPrefabs.model3dPrefab, _elementContainerGO.transform);
-                GltfAsset gltf = prefab.GetComponentInChildren<GltfAsset>();
-                gltf.Url = file.FullName;
-                Debug.Log($"[{GetType().Name}] Import() | Imported {file.FullName} as {prefab.name}");
+                return await prefab.GetComponent<Model3D>().Init(url);
             }
+
+            if (extension is "png" or "jpg" or "jpeg") {
+                GameObject prefab = Instantiate(_importPrefabs.imagePrefab, _elementContainerGO.transform);
+                return await prefab.GetComponent<Image>().Init(url);
+            }
+
+            return false;
         }
+        #endregion Methods
 
         [System.Serializable]
         private class IconDefinition {
