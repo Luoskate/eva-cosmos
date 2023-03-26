@@ -1,6 +1,10 @@
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using EVA.Interaction;
+using EVA.UI;
 using GLTFast;
+using Oculus.Interaction;
 using UnityEngine;
 
 namespace EVA.Import {
@@ -15,6 +19,9 @@ namespace EVA.Import {
         private GltfBoundsAsset _gltfBoundsAsset;
 
         [SerializeField]
+        private InteractableOutline _interactableOutline;
+
+        [SerializeField]
         private List<GameObject> _deferredGOs = new();
         #endregion Serialized Fields
 
@@ -25,7 +32,7 @@ namespace EVA.Import {
          * Loads the <see cref="GltfBoundsAsset" /> and activates all deferred <see cref="GameObject" />.
          * </summary>
          * <param name="url">The URL poiting to the 3D file</param>
-         * <returns><see langword="true" /> if loading succeeded, <see langword="flase" /> otherwise.</returns>
+         * <returns><see langword="true" /> if loading succeeded, <see langword="false" /> otherwise.</returns>
          */
         public async Task<bool> Init(string url) {
             // Load 3D model
@@ -34,6 +41,9 @@ namespace EVA.Import {
                 Debug.LogWarning($"[{GetType().Name}] Init() | Error while importing: {url} as {name}");
                 return false;
             }
+
+            Outline outline = _gltfBoundsAsset.gameObject.AddComponent<Outline>();
+            _interactableOutline.InjectOutline(outline);
 
             // Activate all deferred game objects
             foreach (GameObject go in _deferredGOs) {

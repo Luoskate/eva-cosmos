@@ -52,6 +52,8 @@
         "Temp/": true
     },
     "cSpell.words": [
+        "grabbable",
+        "Mathf",
         "OVRGLTF"
     ],
     "omnisharp.analyzeOpenDocumentsOnly": true,
