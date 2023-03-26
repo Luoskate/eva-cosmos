@@ -1,6 +1,12 @@
 <map id="EVA.Import.Model3D" name="EVA.Import.Model3D">
-<area shape="rect" id="node1" title="Manipulate a 3D model in the scene." alt="" coords="131,93,274,119"/>
-<area shape="rect" id="node2" href="$class_mono_behaviour.html" title=" " alt="" coords="5,5,117,31"/>
-<area shape="rect" id="node3" title=" " alt="" coords="142,5,263,31"/>
-<area shape="rect" id="node4" title=" " alt="" coords="288,5,427,31"/>
+<area shape="rect" id="node1" title="Manipulate a 3D model in the scene." alt="" coords="632,146,775,171"/>
+<area shape="rect" id="node2" title=" " alt="" coords="11,6,123,31"/>
+<area shape="rect" id="node4" href="$class_e_v_a_1_1_interaction_1_1_interactable_outline.html" title=" " alt="" coords="283,109,465,149"/>
+<area shape="rect" id="node3" title=" " alt="" coords="313,174,435,199"/>
+<area shape="rect" id="node5" title=" " alt="" coords="35,86,98,111"/>
+<area shape="rect" id="node6" title=" " alt="" coords="41,146,93,171"/>
+<area shape="rect" id="node7" title=" " alt="" coords="43,203,90,229"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,253,128,278"/>
+<area shape="rect" id="node9" title=" " alt="" coords="43,302,90,327"/>
+<area shape="rect" id="node10" title=" " alt="" coords="305,223,443,249"/>
 </map>

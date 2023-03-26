@@ -1,0 +1,11 @@
+<map id="EVA.Interaction.DistanceGrabInteractor" name="EVA.Interaction.DistanceGrabInteractor">
+<area shape="rect" id="node1" title=" " alt="" coords="799,121,965,161"/>
+<area shape="rect" id="node2" title=" " alt="" coords="434,57,597,97"/>
+<area shape="rect" id="node3" href="$class_e_v_a_1_1_interaction_1_1_distance_select_interactor.html" title=" " alt="" coords="432,121,599,161"/>
+<area shape="rect" id="node4" href="$class_pointer_interactor.html" title=" " alt="" coords="17,5,209,60"/>
+<area shape="rect" id="node5" href="$class_i_distance_interactor.html" title=" " alt="" coords="47,84,179,109"/>
+<area shape="rect" id="node6" title=" " alt="" coords="57,133,169,159"/>
+<area shape="rect" id="node7" title=" " alt="" coords="72,188,153,213"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,237,220,292"/>
+<area shape="rect" id="node9" title=" " alt="" coords="492,185,539,211"/>
+</map>

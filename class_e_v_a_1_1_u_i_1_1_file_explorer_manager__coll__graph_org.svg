@@ -20,7 +20,7 @@
 <!-- Node2 -->
 <g id="node2" class="node">
 <title>Node2</title>
-<g id="a_node2"><a xlink:href="class_mono_behaviour.html" target="_top" xlink:title=" ">
+<g id="a_node2"><a xlink:title=" ">
 <polygon fill="white" stroke="#666666" points="314.5,-243 230.5,-243 230.5,-224 314.5,-224 314.5,-243"/>
 <text text-anchor="middle" x="272.5" y="-231" font-family="Helvetica,sans-Serif" font-size="10.00">MonoBehaviour</text>
 </a>

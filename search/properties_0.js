@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dominanthand_0',['DominantHand',['../class_e_v_a_1_1_gameplay_1_1_gameplay_manager.html#a24a2e62ed10e4afa9bc3272ca2f54c86',1,'EVA::Gameplay::GameplayManager']]]
+  ['advancedselector_0',['AdvancedSelector',['../class_e_v_a_1_1_interaction_1_1_distance_select_interactor.html#abe15844ab007a5f150c4a8cf5c5c968d',1,'EVA::Interaction::DistanceSelectInteractor']]]
 ];

@@ -36,6 +36,7 @@ var NAVTREE =
         [ "All", "functions.html", null ],
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ],
+        [ "Enumerations", "functions_enum.html", null ],
         [ "Properties", "functions_prop.html", null ],
         [ "Events", "functions_evnt.html", null ]
       ] ]
@@ -48,7 +49,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"_collapsable_8cs.html"
+"_advanced_controller_selector_8cs.html",
+"class_e_v_a_1_1_interaction_1_1_interactable_outline.html#a24b510608dabb0c28d440c83accf86c1"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

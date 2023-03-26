@@ -1,13 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_mono_behaviour.html" title=" " alt="" coords="5,228,117,253"/>
-<area shape="rect" id="node2" href="$class_e_v_a_1_1_gameplay_1_1_gameplay_manager.html" title=" " alt="" coords="165,5,385,31"/>
-<area shape="rect" id="node3" href="$class_e_v_a_1_1_import_1_1_image.html" title="Manipulate an image in the scene." alt="" coords="212,55,339,80"/>
-<area shape="rect" id="node4" href="$class_e_v_a_1_1_import_1_1_model3_d.html" title="Manipulate a 3D model in the scene." alt="" coords="204,104,347,129"/>
-<area shape="rect" id="node5" href="$class_e_v_a_1_1_u_i_1_1_collapsable.html" title=" " alt="" coords="208,153,343,179"/>
-<area shape="rect" id="node6" href="$class_e_v_a_1_1_u_i_1_1_collapse_button.html" title=" " alt="" coords="197,203,353,228"/>
-<area shape="rect" id="node7" href="$class_e_v_a_1_1_u_i_1_1_file_explorer_controller.html" title="The FileExplorerController is used to control ONE file explorer and its elements (FileExplorerElement..." alt="" coords="180,252,371,277"/>
-<area shape="rect" id="node8" href="$class_e_v_a_1_1_u_i_1_1_file_explorer_element_controller.html" title="The FileExplorerElementController is used to control ONE element (file / folder) of the file explorer..." alt="" coords="184,302,367,342"/>
-<area shape="rect" id="node9" href="$class_e_v_a_1_1_u_i_1_1_file_explorer_manager.html" title="The FileExplorerManager is responsible for managing ALL file explorers (FileExplorerController)...." alt="" coords="183,367,368,392"/>
-<area shape="rect" id="node10" href="$class_e_v_a_1_1_u_i_1_1_hand_menu_controller.html" title=" " alt="" coords="182,416,369,441"/>
-<area shape="rect" id="node11" href="$class_e_v_a_1_1_u_i_1_1_main_menu_controller.html" title=" " alt="" coords="184,465,367,491"/>
+<area shape="rect" id="node1" href="$class_i_colliders_ref.html" title=" " alt="" coords="23,5,119,31"/>
+<area shape="rect" id="node2" href="$class_e_v_a_1_1_interaction_1_1_distance_select_interactable.html" title=" " alt="" coords="184,73,351,113"/>
+<area shape="rect" id="node3" href="$class_i_relative_to_ref.html" title=" " alt="" coords="17,55,125,80"/>
+<area shape="rect" id="node4" href="$class_i_rigidbody_ref.html" title=" " alt="" coords="19,104,122,129"/>
+<area shape="rect" id="node5" href="$class_pointer_interactable.html" title=" " alt="" coords="5,153,136,179"/>
 </map>
