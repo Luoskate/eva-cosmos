@@ -1,5 +1,7 @@
 version = 1
 
+exclude_patterns = ["!(**/Assets/Scripts/EVA/**/*.cs)"]
+
 [[analyzers]]
 name = "csharp"
 
