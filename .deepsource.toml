@@ -1,0 +1,18 @@
+version = 1
+
+exclude_patterns = [
+  "**/!(*.cs)",
+  "Assets/!(Scripts)/**/*",
+  "Assets/Scripts/!(EVA)/**/*",
+  "./!(Assets)/**/*",
+  "./!(Assets)"
+]
+
+[[analyzers]]
+name = "csharp"
+
+[[analyzers]]
+name = "java"
+
+  [analyzers.meta]
+  runtime_version = "11"
