@@ -1389,7 +1389,8 @@ HTML_EXTRA_FILES       = docs/doxygen-awesome-css/doxygen-awesome-darkmode-toggl
                          docs/doxygen-awesome-css/doxygen-awesome-paragraph-link.js \
                          docs/doxygen-awesome-css/doxygen-awesome-tabs.js \
                          docs/doxygen-custom/img/logo.svg \
-                         docs/doxygen-custom/img/social-background.jpg
+                         docs/doxygen-custom/img/social-background.jpg \
+                         docs/doxygen-custom/img/title-and-logo.png
 
 # The HTML_COLORSTYLE tag can be used to specify if the generated HTML output
 # should be rendered with a dark or light theme.
