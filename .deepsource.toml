@@ -1,6 +1,12 @@
 version = 1
 
-exclude_patterns = ["!(**/Assets/Scripts/EVA/**/*.cs)"]
+exclude_patterns = [
+  "/Assets/Scripts/EVA/**/!(*.cs)",
+  "/Assets/Scripts/!(EVA)/**/*",
+  "/Assets/!(Scripts)/**/*",
+  "/!(Assets)/**/*",
+  "/!(Assets)"
+]
 
 [[analyzers]]
 name = "csharp"
