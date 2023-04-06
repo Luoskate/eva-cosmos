@@ -16,7 +16,7 @@ EVA VR is an innovative tool designed to create virtual art galleries embedded i
 1. Ignore safe mode warning
 2. Install *GLTFast* package from *OpenUPM* by visiting:
 <https://package-installer.glitch.me/v1/installer/OpenUPM/com.atteneder.gltfast?registry=https%3A%2F%2Fpackage.openupm.com&scope=com.atteneder>
-3. Import `com.unity.vectorgraphics` package by selecting "*Add package by name*" in the *Package Manager*
+3. Import `com.unity.vectorgraphics` and `com.unity.nuget.newtonsoft-json` package by selecting "*Add package by name*" in the *Package Manager*
 4. Enable *XR Plugin Management* in the *Project Settings* and install the appropriate plugin for your target platform (e.g. Oculus for Android)
 5. Switch to the *Android* platform in the *Build Settings* and restart *Unity*.
 
