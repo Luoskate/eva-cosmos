@@ -34,6 +34,7 @@ namespace EVA.UI {
         #region Methods
         private void Start() {
             FileExplorerManager = FileExplorerManager.Instance;
+            _explorerBackButton.onClick.AddListener(OpenParent);
             _currentFolder = Directory.CreateDirectory(Application.persistentDataPath + "/Import");
             Debug.Log($"[{GetType().Name}] Start() | Initializing folder {_currentFolder.FullName}");
 

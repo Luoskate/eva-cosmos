@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -9,13 +8,10 @@ namespace EVA.Import {
     * Manipulate an image in the scene.
     * </summary>
     */
-    public class Image : MonoBehaviour {
+    public class Image : ImportObject {
         #region Serialized Fields
         [SerializeField]
         private Renderer _renderer;
-
-        [SerializeField]
-        private List<GameObject> _deferredGOs = new();
         #endregion Serialized Fields
 
         #region Methods
@@ -42,10 +38,7 @@ namespace EVA.Import {
             Texture2D texture = DownloadHandlerTexture.GetContent(uwr);
             _renderer.GetComponent<Renderer>().material.mainTexture = texture;
 
-            // Activate all deferred game objects
-            foreach (GameObject go in _deferredGOs) {
-                go.SetActive(true);
-            }
+            LoadDeferredGOs();
 
             return true;
         }

@@ -48,7 +48,7 @@ namespace EVA.Gameplay {
         }
 
         private void Start() {
-            GrabInteractors = new List<IInteractor>() {
+            GrabInteractors = new() {
                 _leftControllerGrabInteractor as IInteractor,
                 _rightControllerGrabInteractor as IInteractor
             };

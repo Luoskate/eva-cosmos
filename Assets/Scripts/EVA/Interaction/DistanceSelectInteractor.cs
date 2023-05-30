@@ -6,6 +6,9 @@ namespace EVA.Interaction {
         PointerInteractor<DistanceSelectInteractor, DistanceSelectInteractable>,
         IDistanceInteractor {
         [SerializeField]
+        [Interface(typeof(IInteractor))]
+        private MonoBehaviour _canvasInteractor;
+        [SerializeField]
         [Interface(typeof(ISelector))]
         private MonoBehaviour _selector;
 
@@ -20,6 +23,7 @@ namespace EVA.Interaction {
         [SerializeField]
         private DistantCandidateComputer<DistanceSelectInteractable> _distantCandidateComputer = new();
 
+        public IInteractor CanvasInteractor { get; private set; }
         public Pose Origin => _distantCandidateComputer.Origin;
         public Vector3 HitPoint { get; private set; }
         public IRelativeToRef DistanceInteractable => Interactable;
@@ -27,6 +31,7 @@ namespace EVA.Interaction {
 
         protected override void Awake() {
             base.Awake();
+            CanvasInteractor = _canvasInteractor as IInteractor;
             Selector = _selector as ISelector;
             if (_selector is AdvancedControllerSelector) {
                 AdvancedSelector = _selector as AdvancedControllerSelector;
@@ -62,11 +67,20 @@ namespace EVA.Interaction {
         }
 
         protected override void HandleSelected() {
-            if (AdvancedSelector != null && AdvancedSelector.LateSelection && _interactable == null) {
+            if ((AdvancedSelector != null && AdvancedSelector.LateSelection && _interactable == null)
+                || (CanvasInteractor != null && CanvasInteractor.HasCandidate)) {
                 return;
             }
 
             base.HandleSelected();
+        }
+
+        protected override void HandleUnselected() {
+            if (CanvasInteractor != null && CanvasInteractor.HasCandidate) {
+                return;
+            }
+
+            base.HandleUnselected();
         }
 
         protected override Pose ComputePointerPose() {

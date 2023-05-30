@@ -1,10 +1,6 @@
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 using EVA.Interaction;
-using EVA.UI;
 using GLTFast;
-using Oculus.Interaction;
 using UnityEngine;
 
 namespace EVA.Import {
@@ -13,20 +9,16 @@ namespace EVA.Import {
     * Manipulate a 3D model in the scene.
     * </summary>
     */
-    public class Model3D : MonoBehaviour {
+    public class Model3D : ImportObject {
         #region Serialized Fields
         [SerializeField]
         private GltfBoundsAsset _gltfBoundsAsset;
 
         [SerializeField]
         private InteractableOutline _interactableOutline;
-
-        [SerializeField]
-        private List<GameObject> _deferredGOs = new();
         #endregion Serialized Fields
 
         #region Methods
-
         /**
          * <summary>
          * Loads the <see cref="GltfBoundsAsset" /> and activates all deferred <see cref="GameObject" />.
@@ -45,10 +37,7 @@ namespace EVA.Import {
             Outline outline = _gltfBoundsAsset.gameObject.AddComponent<Outline>();
             _interactableOutline.InjectOutline(outline);
 
-            // Activate all deferred game objects
-            foreach (GameObject go in _deferredGOs) {
-                go.SetActive(true);
-            }
+            LoadDeferredGOs();
 
             return true;
         }

@@ -61,5 +61,6 @@
     "docify.commentService.programmingLanguage": "c_sharp",
     "docify.commentService.sidePanelReviewMode": false,
     "docify.translateService.docstringFormat": "XML",
-    "docify.translateService.programmingLanguage": "c_sharp"
+    "docify.translateService.programmingLanguage": "c_sharp",
+    "MutableAI.upsell": false
 }

@@ -859,13 +859,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f53daf5fc5eec646b028ce5deef5629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _renderer: {fileID: 1231096185259552875}
   _deferredGOs:
   - {fileID: 3907300958790727037}
   - {fileID: 5882576107102278221}
   - {fileID: 4022267026510837693}
   - {fileID: 200030939470347736}
   - {fileID: 3096157268349526835}
+  _renderer: {fileID: 1231096185259552875}
 --- !u!1 &9102889000946021394
 GameObject:
   m_ObjectHideFlags: 0

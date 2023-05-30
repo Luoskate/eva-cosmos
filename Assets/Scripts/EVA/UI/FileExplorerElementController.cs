@@ -55,6 +55,7 @@ namespace EVA.UI {
                 iconKey = FileExplorerController.FileExplorerManager
                     .FileNameDefinitions[FileSystemInfo.Name.ToLowerInvariant()];
             } else if (!IsDirectory
+                && FileSystemInfo.Extension is not ""
                 && FileExplorerController.FileExplorerManager.FileExtentionDefinitions
                     .ContainsKey(FileSystemInfo.Extension.ToLowerInvariant()[1..])) {
                 iconKey = FileExplorerController.FileExplorerManager.FileExtentionDefinitions[
