@@ -1,4 +1,4 @@
-using EVA.Import.Properties;
+using EVA.Import.Triggers;
 using UnityEngine;
 using UnityEngine.UI;
 

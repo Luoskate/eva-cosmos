@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace EVA.Import.Properties {
+namespace EVA.Import.Triggers {
     public interface ITriggerEndable {
         public void Trigger();
         public void Toggle(bool value);

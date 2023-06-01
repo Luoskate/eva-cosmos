@@ -1,7 +1,8 @@
 using System.Threading.Tasks;
+using EVA.Interaction;
 using UnityEngine;
 
-namespace EVA.Import.Properties.Triggers {
+namespace EVA.Import.Triggers.Triggers {
     public class TriggersManager : MonoBehaviour {
         private static TriggersManager _instance;
 
@@ -14,6 +15,9 @@ namespace EVA.Import.Properties.Triggers {
 
         [SerializeField]
         private Collider _head;
+
+        [SerializeField]
+        private DistanceSelectInteractor _interactor;
         #endregion Serialized Fields
 
         #region Properties
@@ -28,6 +32,7 @@ namespace EVA.Import.Properties.Triggers {
         }
 
         public Collider Head => _head;
+        public DistanceSelectInteractor Interactor => _interactor;
         #endregion Properties
 
         public void ImportAreaTrigger() {

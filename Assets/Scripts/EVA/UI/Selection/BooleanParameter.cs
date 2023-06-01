@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using EVA.Import.Properties;
+using EVA.Import.Triggers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

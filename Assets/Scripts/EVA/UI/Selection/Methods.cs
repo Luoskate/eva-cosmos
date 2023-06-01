@@ -1,7 +1,7 @@
 using System;
 using System.Reflection;
 using EVA.Import;
-using EVA.Import.Properties;
+using EVA.Import.Triggers;
 using EVA.Interaction;
 using Oculus.Interaction;
 using UnityEngine;

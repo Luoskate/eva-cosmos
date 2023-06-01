@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using EVA.Import.Properties;
+using EVA.Import.Triggers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -16,6 +16,9 @@ namespace EVA.UI.Selection {
 
         [SerializeField]
         private GameObject _parametersPrefab;
+
+        [SerializeField]
+        private GameObject _triggerLinkPrefab;
 
         public Methods Parent { get; set; }
         public Delegate Delegate_ { get; set; }
@@ -49,7 +52,15 @@ namespace EVA.UI.Selection {
                 formatedParameters.Add(parameterInfo.Name, new Tuple<Type, object>(parameterInfo.ParameterType, null));
             }
 
-            TriggerLink link = new(Delegate_, formatedParameters);
+
+
+            TriggerLink link = Instantiate(_triggerLinkPrefab, SelectionRootHandler.transform.parent)
+                .GetComponent<TriggerLink>();
+            link.LinkedDelegate = Delegate_;
+            link.Parameters = formatedParameters;
+            link.Trigger = Selection;
+            link.LinkedObject = SecondarySelection;
+            link.SetColor(UnityEngine.Random.ColorHSV());
             _ = AddLink.DynamicInvoke(link);
 
             Parameters parameters = Instantiate(_parametersPrefab, SelectionRootHandler.transform.parent)

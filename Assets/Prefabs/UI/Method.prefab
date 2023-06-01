@@ -167,6 +167,7 @@ MonoBehaviour:
   _selectButton: {fileID: 2931586651132416656}
   _text: {fileID: 1980492518672569247}
   _parametersPrefab: {fileID: 4728089571252933743, guid: 8e5a038f622e8c2459edefafb5242f54, type: 3}
+  _triggerLinkPrefab: {fileID: 1509932305903430744, guid: 0a5876362b5f0a945a39f4ed6f977d90, type: 3}
 --- !u!1 &2088738426873062727
 GameObject:
   m_ObjectHideFlags: 0

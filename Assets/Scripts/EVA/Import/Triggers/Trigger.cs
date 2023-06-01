@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace EVA.Import.Properties.Triggers {
+namespace EVA.Import.Triggers.Triggers {
     public class Trigger : ImportObject, ITriggerable {
         private event Action WhenTriggered;
 

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using EVA.Import.Properties;
-using EVA.Import.Properties.Triggers;
+using EVA.Import.Triggers;
+using EVA.Import.Triggers.Triggers;
 using UnityEngine;
 using UnityEngine.UI;
 

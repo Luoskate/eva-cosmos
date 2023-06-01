@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EVA.Import.Properties.Triggers {
+namespace EVA.Import.Triggers.Triggers {
     public class AreaTrigger : Trigger, ITriggerEndable {
         public event Action WhenTriggerEnded;
 

@@ -2325,6 +2325,7 @@ MonoBehaviour:
     areaTriggerPrefab: {fileID: 1136966137487892789, guid: d8c8e1b85c97f9c4091d1d1e8e3e5466, type: 3}
   _elementContainerGO: {fileID: 1804902801}
   _head: {fileID: 703545953}
+  _interactor: {fileID: 70833006}
 --- !u!4 &540520986
 Transform:
   m_ObjectHideFlags: 0
@@ -2743,7 +2744,7 @@ RectTransform:
   - {fileID: 535552005}
   - {fileID: 1379167529}
   m_Father: {fileID: 1150144477}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -4315,7 +4316,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1150144477}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5295,6 +5296,7 @@ GameObject:
   - component: {fileID: 1150144480}
   - component: {fileID: 1150144479}
   - component: {fileID: 1150144478}
+  - component: {fileID: 1150144484}
   m_Layer: 0
   m_Name: ShortcutsCanvas
   m_TagString: Untagged
@@ -5314,6 +5316,7 @@ RectTransform:
   m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1704683582}
   - {fileID: 674741793}
   - {fileID: 1033346218}
   m_Father: {fileID: 1137413479}
@@ -5420,6 +5423,22 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1150144484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1150144476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c1e2801aa7e3714fb3fd4ebecd1d093, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  collapseContainerGO: {fileID: 674741792}
+  notchRectTransform: {fileID: 1704683582}
+  _CollapsableRectTransform: {fileID: 1150144477}
+  _SurfaceRectTransform: {fileID: 1033346218}
 --- !u!1 &1152809167
 GameObject:
   m_ObjectHideFlags: 0
@@ -7119,6 +7138,42 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9048238750646488156, guid: ea16c3c8c1688234fa81a4f39339bf1b, type: 3}
   m_PrefabInstance: {fileID: 639219811}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1704683581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1704683582}
+  m_Layer: 0
+  m_Name: Empty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1704683582
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704683581}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1150144477}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1731245524
 GameObject:
   m_ObjectHideFlags: 0
@@ -8885,7 +8940,9 @@ MonoBehaviour:
   notchButtonImage: {fileID: 1999296072956835920}
   notchCollapsedButtonSprite: {fileID: -8133290119634698585, guid: 64f884351318b694f942625580e64a8b, type: 3}
   notchOpenedButtonSprite: {fileID: -4225235479564634476, guid: 64f884351318b694f942625580e64a8b, type: 3}
-  collapsable: {fileID: 1496831705017249410}
+  collapsables:
+  - {fileID: 1496831705017249410}
+  - {fileID: 1150144484}
 --- !u!114 &470775372890797701
 MonoBehaviour:
   m_ObjectHideFlags: 0
