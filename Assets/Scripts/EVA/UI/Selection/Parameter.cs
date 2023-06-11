@@ -1,8 +1,8 @@
 using System;
-using EVA.Import.Triggers;
 using UnityEngine;
+using Veery.Import.Triggers;
 
-namespace EVA.UI.Selection {
+namespace Veery.UI.Selection {
     public abstract class Parameter : SelectionProperty {
         public string Name { get; set; }
         public TriggerLink Link_ { get; set; }

@@ -1,10 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using EVA.Import;
 using Newtonsoft.Json;
 using UnityEngine;
+using Veery.Import;
 
-namespace EVA.UI {
+namespace Veery.UI {
     /// <summary>
     /// The <see cref="FileExplorerManager"/> is responsible for managing <b>ALL</b> file explorers (<see cref="FileExplorerController"/>). The scene must contain only one.
     /// </summary>
@@ -69,20 +70,27 @@ namespace EVA.UI {
         /// </list>
         /// </remarks>
         /// <param name="url">The file to import.</param>
-        public async Task<bool> Import(string url) {
-            string extension = url.Split('.')[^1];
+        public Task<Tuple<bool, GameObject>> Import(string url) {
+            return Import(url, Pose.identity);
+        }
 
+        public async Task<Tuple<bool, GameObject>> Import(string url, Pose pose) {
+            string extension = url.Split('.')[^1];
             if (extension is "gltf" or "glb") {
-                GameObject prefab = Instantiate(_importPrefabs.model3dPrefab, _elementContainerGO.transform);
-                return await prefab.GetComponent<Model3D>().Init(url);
+                GameObject prefab = Instantiate(
+                    _importPrefabs.model3dPrefab,
+                    pose.position,
+                    pose.rotation,
+                    _elementContainerGO.transform);
+                return new Tuple<bool, GameObject>(await prefab.GetComponent<Model3D>().Init(url), prefab);
             }
 
             if (extension is "png" or "jpg" or "jpeg") {
                 GameObject prefab = Instantiate(_importPrefabs.imagePrefab, _elementContainerGO.transform);
-                return await prefab.GetComponent<Image>().Init(url);
+                return new Tuple<bool, GameObject>(await prefab.GetComponent<Image>().Init(url), prefab);
             }
 
-            return false;
+            return new Tuple<bool, GameObject>(false, null);
         }
         #endregion Methods
 

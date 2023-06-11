@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using static OVRInput;
 
-namespace EVA.UI {
+namespace Veery.UI {
     public class MainMenuController : MonoBehaviour {
         public static event Action Opened;
         public static event Action Closed;

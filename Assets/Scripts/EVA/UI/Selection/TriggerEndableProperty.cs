@@ -1,9 +1,9 @@
 using System.Collections.Generic;
-using EVA.Import.Triggers;
 using UnityEngine;
 using UnityEngine.UI;
+using Veery.Import.Triggers;
 
-namespace EVA.UI.Selection {
+namespace Veery.UI.Selection {
     public class TriggerEndableProperty : SelectionProperty {
         #region Serialized Fields
         [SerializeField]

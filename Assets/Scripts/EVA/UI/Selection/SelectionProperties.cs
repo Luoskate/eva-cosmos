@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
-using EVA.Import;
-using EVA.Import.Triggers.Triggers;
-using EVA.Interaction;
 using Oculus.Interaction;
 using UnityEngine;
+using Veery.Import;
+using Veery.Import.Triggers.Triggers;
+using Veery.Interaction;
 
-namespace EVA.UI.Selection {
+namespace Veery.UI.Selection {
     public class SelectionProperties : MonoBehaviour {
         [Serializable]
         private struct SelectionPrefab {

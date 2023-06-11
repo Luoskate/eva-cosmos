@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
 
-namespace EVA.Import {
+namespace Veery.Import {
     /**
     * <summary>
     * Manipulate an image in the scene.
@@ -37,6 +37,8 @@ namespace EVA.Import {
 
             Texture2D texture = DownloadHandlerTexture.GetContent(uwr);
             _renderer.GetComponent<Renderer>().material.mainTexture = texture;
+
+            Url = url;
 
             LoadDeferredGOs();
 

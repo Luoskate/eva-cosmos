@@ -1,10 +1,9 @@
-using EVA.Gameplay;
-
 using UnityEngine;
 using UnityEngine.UI;
+using Veery.Gameplay;
 using static OVRInput;
 
-namespace EVA.UI {
+namespace Veery.UI {
     public class HandMenuController : MonoBehaviour {
         #region Serialized Fields
         [SerializeField]

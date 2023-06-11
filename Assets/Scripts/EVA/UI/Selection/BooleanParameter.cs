@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using EVA.Import.Triggers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Veery.Import.Triggers;
 
-namespace EVA.UI.Selection {
+namespace Veery.UI.Selection {
     public class BooleanParameter : Parameter {
         [SerializeField]
         private Toggle _toggle;
@@ -35,14 +35,13 @@ namespace EVA.UI.Selection {
 
         public void Toggle(bool value) {
             Debug.Log($"Toggle {Name} to {value}");
-            TriggerLink originalLink = (GetLinks.DynamicInvoke() as List<TriggerLink>).Find(
+            List<TriggerLink> links = (GetLinks.DynamicInvoke() as List<TriggerLink>);
+            TriggerLink originalLink = links.Find(
                 link => link.LinkedDelegate == Link_.LinkedDelegate);
             if (originalLink == null) {
                 Debug.LogError($"[{GetType().Name}] originalLink is null");
                 return;
             }
-
-            Debug.Log($"[{GetType().Name}] originalLink: {originalLink} | {originalLink == Link_}");
 
             originalLink.Parameters[Name] = new(Link_.Parameters[Name].Item1, value);
         }

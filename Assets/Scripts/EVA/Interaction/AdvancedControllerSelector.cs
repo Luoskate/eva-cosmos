@@ -3,7 +3,7 @@ using Oculus.Interaction;
 using Oculus.Interaction.Input;
 using UnityEngine;
 
-namespace EVA.Interaction {
+namespace Veery.Interaction {
     public class AdvancedControllerSelector : MonoBehaviour, ISelector {
         public enum ControllerSelectorLogicOperator {
             Any = 0,

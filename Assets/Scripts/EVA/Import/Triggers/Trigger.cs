@@ -3,17 +3,12 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
 
-namespace EVA.Import.Triggers.Triggers {
+namespace Veery.Import.Triggers.Triggers {
     public class Trigger : ImportObject, ITriggerable {
-        private event Action WhenTriggered;
+        private event Action WhenTriggered = delegate { };
 
         private bool Enabled { get; set; }
-        private List<TriggerLink> Links { get; set; }
-
-        public void Start() {
-            Enabled = false;
-            Links = new();
-        }
+        private List<TriggerLink> Links { get; } = new();
 
         public Task<bool> Init() {
             LoadDeferredGOs();
@@ -22,7 +17,7 @@ namespace EVA.Import.Triggers.Triggers {
         }
 
         void ITriggerable.Trigger() {
-            Debug.Log($"[{GetType().Name}] (Trigger) Trigger()");
+            Debug.Log($"[{GetType().Name}] (Trigger) Trigger({Enabled})");
             if (!Enabled) {
                 return;
             }
@@ -36,7 +31,6 @@ namespace EVA.Import.Triggers.Triggers {
         }
 
         void ITriggerable.AddLink(TriggerLink triggerLink) {
-            Debug.Log($"[{GetType().Name}] (Trigger) AddLink({triggerLink})");
             Links.Add(triggerLink);
             WhenTriggered += triggerLink.TriggerDelegate;
         }

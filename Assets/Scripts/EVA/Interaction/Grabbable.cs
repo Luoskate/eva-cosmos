@@ -20,11 +20,11 @@
 
 using System.Collections.Generic;
 using System.Linq;
-using EVA.Gameplay;
 using Oculus.Interaction;
 using UnityEngine;
+using Veery.Gameplay;
 
-namespace EVA.Interaction {
+namespace Veery.Interaction {
     public class Grabbable : PointableElement, IGrabbable {
         [SerializeField]
         [Interface(typeof(ITransformer))]

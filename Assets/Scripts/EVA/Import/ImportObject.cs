@@ -1,21 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
-using EVA.Import.Triggers;
-using EVA.Import.Triggers.Triggers;
-using EVA.Interaction;
 using Oculus.Interaction;
 using UnityEngine;
+using Veery.Import.Triggers;
+using Veery.Import.Triggers.Triggers;
+using Veery.Interaction;
 
-namespace EVA.Import {
+namespace Veery.Import {
     public class ImportObject : MonoBehaviour, IEnableable {
         #region Serialized Fields
         [SerializeField]
         private List<GameObject> _deferredGOs = new();
+        #endregion Serialized Fields
 
         private DistanceSelectInteractable interactable;
         private GameObject head;
         private bool selected;
-        #endregion Serialized Fields
+
+        public string Url { get; set; }
 
         #region Methods
         public IEnumerator Start() {

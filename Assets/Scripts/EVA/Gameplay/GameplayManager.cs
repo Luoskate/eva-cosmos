@@ -4,7 +4,7 @@ using Oculus.Interaction;
 using UnityEngine;
 using static OVRInput;
 
-namespace EVA.Gameplay {
+namespace Veery.Gameplay {
     public class GameplayManager : MonoBehaviour {
         [SerializeField]
         [Interface(typeof(IInteractor))]

@@ -1,7 +1,7 @@
 using Oculus.Interaction;
 using UnityEngine;
 
-namespace EVA.Interaction {
+namespace Veery.Interaction {
     public class InteractableOutline : MonoBehaviour {
         [SerializeField]
         [Interface(typeof(IInteractableView))]

@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
-using EVA.Interaction;
 using GLTFast;
 using UnityEngine;
+using Veery.Interaction;
 
-namespace EVA.Import {
+namespace Veery.Import {
     /**
     * <summary>
     * Manipulate a 3D model in the scene.
@@ -36,6 +36,8 @@ namespace EVA.Import {
 
             Outline outline = _gltfBoundsAsset.gameObject.AddComponent<Outline>();
             _interactableOutline.InjectOutline(outline);
+
+            Url = url;
 
             LoadDeferredGOs();
 

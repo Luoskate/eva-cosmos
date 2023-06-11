@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace EVA.Import.Triggers {
+namespace Veery.Import.Triggers {
     public interface ITriggerable {
         public void Trigger();
         public void Toggle(bool value);

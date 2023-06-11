@@ -1,10 +1,10 @@
 using System;
-using EVA.Import.Triggers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Veery.Import.Triggers;
 
-namespace EVA.UI.Selection {
+namespace Veery.UI.Selection {
     public class Link : SelectionProperty {
         [SerializeField]
         private Button _deleteButton;

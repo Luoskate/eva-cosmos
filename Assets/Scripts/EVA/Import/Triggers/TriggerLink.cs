@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace EVA.Import.Triggers {
+namespace Veery.Import.Triggers {
     public class TriggerLink : MonoBehaviour {
         [SerializeField]
         private LineRenderer _lineRenderer;
@@ -16,7 +16,7 @@ namespace EVA.Import.Triggers {
         public ImportObject Trigger { get; set; }
         public ImportObject LinkedObject { get; set; }
 
-        public void Start() {
+        private void Awake() {
             TriggerDelegate = new(Invoke);
             _lineRenderer.material = _material;
         }
@@ -35,8 +35,10 @@ namespace EVA.Import.Triggers {
         }
 
         public void Invoke() {
+            Debug.Log("TriggerLink.Invoke");
             List<object> args = new();
             foreach (Tuple<Type, object> parameter in Parameters.Values) {
+                Debug.Log($"TriggerLink.Invoke: {parameter.Item2} ({parameter.Item1})");
                 args.Add(parameter.Item2);
             }
 

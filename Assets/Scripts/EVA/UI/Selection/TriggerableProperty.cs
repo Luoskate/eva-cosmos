@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-using EVA.Import.Triggers;
-using EVA.Import.Triggers.Triggers;
 using UnityEngine;
 using UnityEngine.UI;
+using Veery.Import.Triggers;
 
-namespace EVA.UI.Selection {
+namespace Veery.UI.Selection {
     public class TriggerableProperty : SelectionProperty {
         #region Serialized Fields
         [SerializeField]
@@ -42,7 +41,6 @@ namespace EVA.UI.Selection {
             links.Selection = Selection;
             AddLinks addLink = ((ITriggerable)Selection).AddLink;
             links.AddLink = addLink;
-            Debug.Log($"[{GetType().Name}] addLink: {addLink}");
             RemoveLinks removeLink = ((ITriggerable)Selection).RemoveLink;
             links.RemoveLink = removeLink;
             GetLinks getLinks = ((ITriggerable)Selection).GetLinks;

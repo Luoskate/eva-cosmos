@@ -1,8 +1,8 @@
 using System.Threading.Tasks;
-using EVA.Interaction;
 using UnityEngine;
+using Veery.Interaction;
 
-namespace EVA.Import.Triggers.Triggers {
+namespace Veery.Import.Triggers.Triggers {
     public class TriggersManager : MonoBehaviour {
         private static TriggersManager _instance;
 

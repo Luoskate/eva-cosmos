@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Reflection;
-using EVA.Import.Triggers;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Veery.Import.Triggers;
 
-namespace EVA.UI.Selection {
+namespace Veery.UI.Selection {
     public class Method : SelectionProperty {
         [SerializeField]
         private Button _selectButton;

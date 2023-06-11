@@ -1,13 +1,13 @@
 using System;
 using System.Reflection;
-using EVA.Import;
-using EVA.Import.Triggers;
-using EVA.Interaction;
 using Oculus.Interaction;
 using UnityEngine;
 using UnityEngine.UI;
+using Veery.Import;
+using Veery.Import.Triggers;
+using Veery.Interaction;
 
-namespace EVA.UI.Selection {
+namespace Veery.UI.Selection {
     public class Methods : SelectionProperty {
         [SerializeField]
         private Button _backButton;
