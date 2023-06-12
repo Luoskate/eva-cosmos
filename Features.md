@@ -26,9 +26,9 @@ Sélectionnez votre objet : Utilisez le pointeur de votre contrôleur VR pour s�
 
 Cliquez avec le bouton "A/One" sur votre objet cela le placera dans la scène 3D à l'emplacement souhaité.
 
-![Feature 1](https://luoskate.github.io/eva-cosmos/features1.png)
+![Importation d'un objet](features1.jpg)
 
-![Feature 2](https://luoskate.github.io/eva-cosmos/features2.png)
+![Déplacement de l'objet dans la scène](features2.jpg)
 
 Placez l'objet dans la scène : Une fois que vous avez sélectionné l'objet "contour bleu", faites glisser et déposez-le à l'emplacement souhaité dans la scène virtuelle. Cela déterminera l'emplacement avec lequel les éléments virtuels seront ancrés.
 
@@ -36,11 +36,11 @@ Désélectionnez l'objet : Après avoir placé l'objet "contour bleu" dans la sc
 
 Vérifiez le panneau : Sur le panneau de contrôle ou dans l'interface utilisateur d'EVA VR, recherchez l'indicateur "save true" (sauvegarder vrai). Assurez-vous qu'il est affiché, ce qui signifie que les modifications apportées à l'emplacement du point d'ancrage ont été enregistrées avec succès.
 
-![Feature 3](https://luoskate.github.io/eva-cosmos/features3.png)
+![Ancres créée automatiquement](features3.jpg)
 
 Redémarrez l'application : Quittez l'application EVA VR et redémarrez-la pour permettre la prise en compte des nouveaux réglages du point d'ancrage.
 
-![Feature 4](https://luoskate.github.io/eva-cosmos/features4.png)
+![Quitter l'application](features4.jpg)
 
 Cliquez sur le bouton "load" : Utilisez votre contrôleur VR pour pointer vers le bouton "load" et cliquez avec le bouton approprié (par exemple, "A" ou "One") pour l'activer. Cette action déclenchera le processus de chargement des paramètres du point d'ancrage.
 
@@ -48,7 +48,7 @@ Attendre le chargement : Après avoir cliqué sur le bouton "load", veuillez pat
 
 Instantiation du modèle au bon endroit : Une fois le chargement terminé, EVA VR instanciera le modèle à l'endroit précis où il a été enregistré dans la scène virtuelle. Vous pourrez alors voir votre modèle apparaître, respectant les paramètres de position, de rotation et d'échelle que vous avez définis précédemment.
 
-![Feature 5](https://luoskate.github.io/eva-cosmos/features5.png)
+![Charger les ancres sauvegardés](features5.jpg)
 
 Cliquer sur le bouton "remove all" : Utilisez votre contrôleur VR pour pointer vers le bouton "remove all" et cliquez avec le bouton approprié (par exemple, "A" ou "One") pour l'activer. En cliquant sur ce bouton, toutes les ancres présentes dans la scène virtuelle seront supprimées.
 

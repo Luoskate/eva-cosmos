@@ -1,6 +1,6 @@
 # EVA VR
 
-![Title and Logo](https://luoskate.github.io/eva-cosmos/title-and-logo.png)
+![EVA VR](title-and-logo.png)
 
 ## Description
 
@@ -77,5 +77,5 @@ En résumé, EVA VR repousse les limites de la créativité, de la découverte a
 
 ## Suivant
 
-- **[Avant de Démarrer](https://luoskate.github.io/eva-cosmos/BeforeStarting.html)**
-- **[Fonctionnalités](https://luoskate.github.io/eva-cosmos/features.html)**
+- **[Avant de Démarrer](md__before_starting.html)**
+- **[Fonctionnalités](md__features.html)**

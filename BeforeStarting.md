@@ -2,7 +2,7 @@
 
 ## Contrôles
 
-![Contrôles](https://luoskate.github.io/eva-cosmos/controls.png)
+![Contrôles](controls.png)
 
 ## Importation des assets
 
@@ -24,4 +24,4 @@ Une fois les fichiers importés dans le dossier spécifié sur le casque, ils de
 
 ## Suivant
 
-- **[Fonctionnalités](https://luoskate.github.io/eva-cosmos/features.html)**
+- **[Fonctionnalités](md__features.html)**
