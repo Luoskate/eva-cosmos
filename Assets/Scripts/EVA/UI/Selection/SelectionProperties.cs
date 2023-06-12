@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Oculus.Interaction;
 using UnityEngine;
 using Veery.Import;
-using Veery.Import.Triggers.Triggers;
 using Veery.Interaction;
 
 namespace Veery.UI.Selection {

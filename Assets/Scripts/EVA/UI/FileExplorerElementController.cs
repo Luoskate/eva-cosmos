@@ -12,6 +12,7 @@ namespace Veery.UI {
     /// </summary>
     public class FileExplorerElementController : MonoBehaviour {
         private FileSystemInfo _fileSystemInfo;
+        private EventSystem _eventSystem;
 
         #region Properties
         /// <summary>
@@ -32,12 +33,19 @@ namespace Veery.UI {
         }
 
         /// <summary>
-        /// Whether the element is a directory.
+        /// Indicates whether the element is a directory.
         /// </summary>
         public bool IsDirectory => Directory.Exists(FileSystemInfo.FullName);
         #endregion Properties
 
         #region Methods
+        private void Start() {
+            _eventSystem = FindObjectOfType<EventSystem>();
+            if (_eventSystem == null) {
+                Debug.LogError($"[{GetType().Name}] No EventSystem found in the scene.");
+            }
+        }
+
         /// <summary>
         /// Loads the icon for the element.
         /// </summary>
@@ -45,27 +53,24 @@ namespace Veery.UI {
             transform.Find("FileName").GetComponent<TextMeshProUGUI>().text = FileSystemInfo.Name.ToLowerInvariant();
             string iconKey = (IsDirectory) ? "folder" : "file";
 
+            FileExplorerManager fileExplorerManager = FileExplorerController.FileExplorerManager;
             if (IsDirectory
-                && FileExplorerController.FileExplorerManager.FolderDefinitions
-                    .ContainsKey(FileSystemInfo.Name.ToLowerInvariant())) {
-                iconKey = FileExplorerController.FileExplorerManager
-                    .FolderDefinitions[FileSystemInfo.Name.ToLowerInvariant()];
+                && fileExplorerManager.FolderDefinitions.ContainsKey(FileSystemInfo.Name.ToLowerInvariant())) {
+                iconKey = fileExplorerManager.FolderDefinitions[FileSystemInfo.Name.ToLowerInvariant()];
             } else if (!IsDirectory
-                && FileExplorerController.FileExplorerManager.FileNameDefinitions
-                    .ContainsKey(FileSystemInfo.Name.ToLowerInvariant())) {
-                iconKey = FileExplorerController.FileExplorerManager
-                    .FileNameDefinitions[FileSystemInfo.Name.ToLowerInvariant()];
+                && fileExplorerManager.FileNameDefinitions.ContainsKey(FileSystemInfo.Name.ToLowerInvariant())) {
+                iconKey = fileExplorerManager.FileNameDefinitions[FileSystemInfo.Name.ToLowerInvariant()];
             } else if (!IsDirectory
                 && FileSystemInfo.Extension is not ""
-                && FileExplorerController.FileExplorerManager.FileExtentionDefinitions
+                && fileExplorerManager.FileExtensionDefinitions
                     .ContainsKey(FileSystemInfo.Extension.ToLowerInvariant()[1..])) {
-                iconKey = FileExplorerController.FileExplorerManager.FileExtentionDefinitions[
+                iconKey = fileExplorerManager.FileExtensionDefinitions[
                     FileSystemInfo.Extension.ToLowerInvariant()[1..]];
             }
 
             // Change the sprite component of "Icon" GameObject to file icon
             Sprite sprite = Resources.Load<Sprite>(
-                FileExplorerController.FileExplorerManager.IconDefinitions[iconKey]);
+                fileExplorerManager.IconDefinitions[iconKey]);
             transform.Find("Icon").GetComponent<SVGImage>().sprite = sprite;
             Debug.Log($"[{GetType().Name}] LoadIcon() | Set icon to: {sprite.name}");
         }
@@ -75,8 +80,7 @@ namespace Veery.UI {
         /// If the element is a folder, it will open the it (using <see cref="FileExplorerController.OpenFolder" />).
         /// Otherwise, it will import the file (using <see cref="FileExplorerManager.Import" />).
         /// </summary>
-        public void OnClick() {
-            // Opens the folder if the current directory is a directory.
+        public async void OnClick() {
             if (IsDirectory) {
                 FileExplorerController.OpenFolder(FileSystemInfo.Name);
                 return;
@@ -84,16 +88,15 @@ namespace Veery.UI {
 
             Task<Tuple<bool, GameObject>> importTask = FileExplorerController.FileExplorerManager
                 .Import(FileSystemInfo.FullName);
-            _ = importTask.ContinueWith((Task<Tuple<bool, GameObject>> t) => {
-                if (t.Result.Item1) {
-                    Debug.Log($"[{GetType().Name}] OnClick() | Successfully imported: {FileSystemInfo.FullName}");
-                } else {
-                    Debug.LogWarning(
-                        $"[{GetType().Name}] OnClick() | Error while importing: {FileSystemInfo.FullName}");
-                }
-            });
+            Tuple<bool, GameObject> importResult = await importTask.ConfigureAwait(false);
 
-            FindObjectOfType<EventSystem>().SetSelectedGameObject(null);
+            if (importResult.Item1) {
+                Debug.Log($"[{GetType().Name}] OnClick() | Successfully imported: {FileSystemInfo.FullName}");
+            } else {
+                Debug.LogWarning($"[{GetType().Name}] OnClick() | Error while importing: {FileSystemInfo.FullName}");
+            }
+
+            _eventSystem.SetSelectedGameObject(null);
         }
         #endregion Methods
     }

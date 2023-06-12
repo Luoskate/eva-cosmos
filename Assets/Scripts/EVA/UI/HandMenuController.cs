@@ -1,74 +1,124 @@
 using UnityEngine;
-using UnityEngine.UI;
 using Veery.Gameplay;
 using static OVRInput;
 
 namespace Veery.UI {
+    /// <summary>
+    /// Controls the positioning and parenting of a menu based on the active <see cref="Controller"/> and <see cref="Handedness"/>.
+    /// </summary>
     public class HandMenuController : MonoBehaviour {
         #region Serialized Fields
-        [SerializeField]
-        private Transform controllerLeft;
 
         [SerializeField]
-        private Transform controllerRight;
+        [Tooltip("The scale applied to the menu.")]
+        /// <summary>
+        /// The scale applied to the menu.
+        /// </summary>
+        private Vector3 _scale;
+
+        [Header("Controller")]
+        [SerializeField]
+        [Tooltip("The transform representing the left controller.")]
+        /// <summary>
+        /// The transform representing the left controller.
+        /// </summary>
+        private Transform _controllerLeft;
 
         [SerializeField]
-        private Transform handLeft;
+        [Tooltip("The transform representing the right controller.")]
+        /// <summary>
+        /// The transform representing the right controller.
+        /// </summary>
+        private Transform _controllerRight;
 
         [SerializeField]
-        private Transform handRight;
+        [Tooltip("The offset applied to the controller's position.")]
+        /// <summary>
+        /// The offset applied to the controller's position.
+        /// </summary>
+        private Vector3 _controllerOffset;
 
         [SerializeField]
-        private Vector3 controllerOffset;
+        [Tooltip("The offset applied to the controller's rotation.")]
+        /// <summary>
+        /// The offset applied to the controller's rotation.
+        /// </summary>
+        private Quaternion _controllerOffsetRotation;
+
+        [Header("Hand")]
+        [SerializeField]
+        [Tooltip("The transform representing the left hand.")]
+        /// <summary>
+        /// The transform representing the left hand.
+        /// </summary>
+        private Transform _handLeft;
 
         [SerializeField]
-        private Quaternion controllerOffsetRotation;
+        [Tooltip("The transform representing the right hand.")]
+        /// <summary>
+        /// The transform representing the right hand.
+        /// </summary>
+        private Transform _handRight;
 
         [SerializeField]
-        private Vector3 handOffset;
+        [Tooltip("The offset applied to the hand's position.")]
+        /// <summary>
+        /// The offset applied to the hand's position.
+        /// </summary>
+        private Vector3 _handOffset;
 
         [SerializeField]
-        private Quaternion handOffsetRotation;
-
-        [SerializeField]
-        private Vector3 scale;
+        [Tooltip("The offset applied to the hand's rotation.")]
+        /// <summary>
+        /// The offset applied to the hand's rotation.
+        /// </summary>
+        private Quaternion _handOffsetRotation;
         #endregion Serialized Fields
 
-        private Transform _parent;
-
-        private void Start() {
+        #region Methods
+        private void OnEnable() {
+            // Subscribe to the events triggered by the GameplayManager.
             GameplayManager.ControllerChanged += ChangeParent;
             GameplayManager.HandednessChanged += ChangeParent;
         }
 
-        private void ChangeParent() {
-            Debug.Log($"[{GetType().Name}] ChangeParent() |"
-                + $" active controller: {GetActiveController()},"
-                + $" dominant hand: {GameplayManager.Instance.DominantHand}");
+        private void OnDisable() {
+            // Unsubscribe from the events triggered by the GameplayManager.
+            GameplayManager.ControllerChanged -= ChangeParent;
+            GameplayManager.HandednessChanged -= ChangeParent;
+        }
 
-            switch (GetActiveController()) {
+        /// <summary>
+        /// Changes the parent of the menu controller based on the active <see cref="Controller"/> and <see cref="Handedness"/>.
+        /// </summary>
+        private void ChangeParent() {
+            Controller controller = GetActiveController();
+            Handedness dominantHand = GameplayManager.Instance.DominantHand;
+
+            Debug.Log(
+                $"[{GetType().Name}] ChangeParent() | active controller: {controller}, dominant hand: {dominantHand}");
+
+            Transform parentTransform;
+            switch (controller) {
                 case Controller.Hands:
-                    _parent = (GameplayManager.Instance.DominantHand == Handedness.LeftHanded)
-                        ? handRight
-                        : handLeft;
-                    transform.SetParent(_parent);
-                    transform.SetLocalPositionAndRotation(handOffset, handOffsetRotation);
-                    transform.localScale = scale;
+                    parentTransform = (dominantHand == Handedness.LeftHanded) ? _handRight : _handLeft;
+                    transform.SetLocalPositionAndRotation(_handOffset, _handOffsetRotation);
                     break;
 
                 case Controller.Touch:
-                    _parent = (GameplayManager.Instance.DominantHand == Handedness.LeftHanded)
-                        ? controllerRight
-                        : controllerLeft;
-                    transform.SetParent(_parent);
-                    transform.SetLocalPositionAndRotation(controllerOffset, controllerOffsetRotation);
-                    transform.localScale = scale;
+                    parentTransform = (dominantHand == Handedness.LeftHanded) ? _controllerRight : _controllerLeft;
+                    transform.SetLocalPositionAndRotation(_controllerOffset, _controllerOffsetRotation);
                     break;
 
                 default:
-                    Debug.Log($"[{GetType().Name}] ChangeParent() | Not implemented for {GetActiveController()}");
-                    break;
+                    Debug.Log($"[{GetType().Name}] ChangeParent() | Not implemented for {controller}");
+                    return;
             }
+
+            // Set the parent and scale of the menu controller.
+            transform.SetParent(parentTransform);
+            transform.localScale = _scale;
         }
+        #endregion Methods
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Veery.Import.Properties;
 using Veery.Import.Triggers;
 
 namespace Veery.UI.Selection {

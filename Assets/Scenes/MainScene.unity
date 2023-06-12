@@ -448,11 +448,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 105052429}
   m_CullTransparentMesh: 1
---- !u!4 &113685198 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8222833054664525298, guid: fbfc588a949bb1a42b20e5bddc4cf8cf, type: 3}
-  m_PrefabInstance: {fileID: 753744164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &128951169 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7381632195567819182, guid: 8b13b070429a7684eb2c1ae2367ad765, type: 3}
@@ -1562,11 +1557,6 @@ MonoBehaviour:
   _contentGO: {fileID: 7052523415848033231}
   _distanceSelectInteractor1: {fileID: 70833006}
   _distanceSelectInteractor2: {fileID: 894896378}
---- !u!4 &323462121 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4386246251588092277, guid: fbfc588a949bb1a42b20e5bddc4cf8cf, type: 3}
-  m_PrefabInstance: {fileID: 753744164}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &331293806
 GameObject:
   m_ObjectHideFlags: 0
@@ -5818,10 +5808,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1e2801aa7e3714fb3fd4ebecd1d093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collapseContainerGO: {fileID: 674741792}
-  notchRectTransform: {fileID: 1704683582}
-  _CollapsableRectTransform: {fileID: 1150144477}
-  _SurfaceRectTransform: {fileID: 1033346218}
+  _collapseContainerGO: {fileID: 674741792}
+  _notchRectTransform: {fileID: 1704683582}
+  _collapsableRectTransform: {fileID: 674741793}
+  _surfaceRectTransform: {fileID: 1033346218}
 --- !u!1 &1152809167
 GameObject:
   m_ObjectHideFlags: 0
@@ -6037,11 +6027,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1158802369}
   m_CullTransparentMesh: 1
---- !u!4 &1174416105 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2143258138932893621, guid: e7fbb376593cff24f9db4ecf8d465aaf, type: 3}
-  m_PrefabInstance: {fileID: 958060007}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1182975554
 GameObject:
   m_ObjectHideFlags: 0
@@ -7281,11 +7266,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d27ac1ffd4cdd7c40a39dcfa6012355c, type: 3}
---- !u!4 &1432466129 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8662184560145590689, guid: 94313e563929cb3499e3989be338a213, type: 3}
-  m_PrefabInstance: {fileID: 1511314520}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1467415850
 GameObject:
   m_ObjectHideFlags: 0
@@ -10018,10 +9998,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a50807ec87ef1e4cbeacb09fd3874e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  notchButtonImage: {fileID: 1999296072956835920}
-  notchCollapsedButtonSprite: {fileID: -8133290119634698585, guid: 64f884351318b694f942625580e64a8b, type: 3}
-  notchOpenedButtonSprite: {fileID: -4225235479564634476, guid: 64f884351318b694f942625580e64a8b, type: 3}
-  collapsables:
+  _notchImage: {fileID: 1999296072956835920}
+  _notchCollapsedSprite: {fileID: -8133290119634698585, guid: 64f884351318b694f942625580e64a8b, type: 3}
+  _notchOpenedSprite: {fileID: -4225235479564634476, guid: 64f884351318b694f942625580e64a8b, type: 3}
+  _collapsables:
   - {fileID: 1496831705017249410}
   - {fileID: 1150144484}
 --- !u!114 &470775372890797701
@@ -10472,10 +10452,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c1e2801aa7e3714fb3fd4ebecd1d093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  collapseContainerGO: {fileID: 5167479958873396073}
-  notchRectTransform: {fileID: 4821847706129120722}
-  _CollapsableRectTransform: {fileID: 4580170416394350796}
-  _SurfaceRectTransform: {fileID: 7641863658158650984}
+  _collapseContainerGO: {fileID: 5167479958873396073}
+  _notchRectTransform: {fileID: 4821847706129120722}
+  _collapsableRectTransform: {fileID: 2668120975093715470}
+  _surfaceRectTransform: {fileID: 7641863658158650984}
 --- !u!224 &1582053902623805056
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12786,15 +12766,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c14a52230543146a13af203edd01ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controllerLeft: {fileID: 323462121}
-  controllerRight: {fileID: 113685198}
-  handLeft: {fileID: 1174416105}
-  handRight: {fileID: 1432466129}
-  controllerOffset: {x: 0, y: 0.08, z: -0.05}
-  controllerOffsetRotation: {x: 0.38150376, y: 0.030025, z: -0.07248675, w: 0.9210315}
-  handOffset: {x: 0.13, y: 0.1, z: 0}
-  handOffsetRotation: {x: 0.49999997, y: 0.49999997, z: -0.49999997, w: 0.49999997}
-  scale: {x: 0.5, y: 0.5, z: 0.5}
+  _scale: {x: 0, y: 0, z: 0}
+  _controllerLeft: {fileID: 0}
+  _controllerRight: {fileID: 0}
+  _controllerOffset: {x: 0, y: 0, z: 0}
+  _controllerOffsetRotation: {x: 0, y: 0, z: 0, w: 0}
+  _handLeft: {fileID: 0}
+  _handRight: {fileID: 0}
+  _handOffset: {x: 0, y: 0, z: 0}
+  _handOffsetRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!114 &7114770129103222488
 MonoBehaviour:
   m_ObjectHideFlags: 0

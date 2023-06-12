@@ -5,22 +5,43 @@ using UnityEngine;
 using static OVRInput;
 
 namespace Veery.Gameplay {
+    /// <summary>
+    /// Manages gameplay-related functionality, such as controller input and interactor management.
+    /// </summary>
     public class GameplayManager : MonoBehaviour {
         [SerializeField]
         [Interface(typeof(IInteractor))]
+        [Tooltip("The grab interactor on the left controller.")]
+        /// <summary>
+        /// The grab interactor on the left controller.
+        /// </summary>
         private MonoBehaviour _leftControllerGrabInteractor;
 
         [SerializeField]
         [Interface(typeof(IInteractor))]
+        [Tooltip("The grab interactor on the right controller.")]
+        /// <summary>
+        /// The grab interactor on the right controller.
+        /// </summary>
         private MonoBehaviour _rightControllerGrabInteractor;
 
+        /// <summary>
+        /// Event that is triggered when the active controller changes.
+        /// </summary>
         public static event Action ControllerChanged;
+
+        /// <summary>
+        /// Event that is triggered when the dominant hand changes.
+        /// </summary>
         public static event Action HandednessChanged;
 
         private static GameplayManager _instance;
         private Controller _currentController;
         private Handedness _currentHandedness;
 
+        /// <summary>
+        /// Gets or sets the dominant hand for the player.
+        /// </summary>
         public Handedness DominantHand {
             get => _currentHandedness;
 
@@ -35,8 +56,14 @@ namespace Veery.Gameplay {
             }
         }
 
+        /// <summary>
+        /// The list of grab interactors on the controllers.
+        /// </summary>
         public List<IInteractor> GrabInteractors { get; private set; }
 
+        /// <summary>
+        /// The singleton instance of the <see cref="GameplayManager"/> class.
+        /// </summary>
         public static GameplayManager Instance {
             get {
                 if (_instance == null) {
@@ -55,18 +82,35 @@ namespace Veery.Gameplay {
         }
 
         private void Update() {
-            if (_currentController != GetActiveController()) {
-                try {
-                    Debug.Log($"[{GetType().Name}] ControllerChanged event");
-                    _currentController = GetActiveController();
-                    ControllerChanged?.Invoke();
-                } catch (Exception e) {
-                    Debug.LogError("Caught Exception: " + e);
-                }
+            HandleActiveController();
+            HandleDominantHand();
+        }
+
+        /// <summary>
+        /// Manages the dominant hand and triggers the <see cref="HandednessChanged"/> event when the dominant hand changes.
+        /// </summary>
+        private void HandleDominantHand() {
+            if (_currentHandedness == GetDominantHand()) {
+                return;
             }
 
-            if (_currentHandedness != GetDominantHand()) {
-                DominantHand = GetDominantHand();
+            DominantHand = GetDominantHand();
+        }
+
+        /// <summary>
+        /// Manages the active controller and triggers the <see cref="ControllerChanged"/> event when the active controller changes.
+        /// </summary>
+        private void HandleActiveController() {
+            if (_currentController == GetActiveController()) {
+                return;
+            }
+
+            try {
+                Debug.Log($"[{GetType().Name}] ControllerChanged event");
+                _currentController = GetActiveController();
+                ControllerChanged?.Invoke();
+            } catch (Exception e) {
+                Debug.LogError("Caught Exception: " + e);
             }
         }
     }

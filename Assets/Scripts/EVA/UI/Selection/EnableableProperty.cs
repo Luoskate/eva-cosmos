@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
-using Veery.Import.Triggers;
+using Veery.Import.Properties;
 
 namespace Veery.UI.Selection {
     public class EnableableProperty : SelectionProperty {

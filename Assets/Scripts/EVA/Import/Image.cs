@@ -3,25 +3,25 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 namespace Veery.Import {
-    /**
-    * <summary>
-    * Manipulate an image in the scene.
-    * </summary>
-    */
+    /// <summary>
+    /// Represents an image that can be imported into the game.
+    /// </summary>
     public class Image : ImportObject {
         #region Serialized Fields
         [SerializeField]
+        [Tooltip("The Renderer component of the image.")]
+        /// <summary>
+        /// The Renderer component of the image.
+        /// </summary>
         private Renderer _renderer;
         #endregion Serialized Fields
 
         #region Methods
-        /**
-         * <summary>
-         * Loads the image and activates all deferred <see cref="GameObject" />.
-         * </summary>
-         * <param name="url">The URL poiting to the image</param>
-         * <returns><see langword="true" /> if loading succeeded, <see langword="false" /> otherwise.</returns>
-         */
+        /// <summary>
+        /// Initializes the image by downloading it from the specified URL and setting it as the main texture of the Renderer component.
+        /// </summary>
+        /// <param name="url">The URL of the image to download.</param>
+        /// <returns>A task that represents the asynchronous operation. The task result contains a value indicating whether the initialization was successful.</returns>
         public async Task<bool> Init(string url) {
             // Load the image
             using UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(url);

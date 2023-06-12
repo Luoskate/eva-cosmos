@@ -2,14 +2,33 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using UnityEngine;
+using Veery.Import.Properties;
 
-namespace Veery.Import.Triggers.Triggers {
+namespace Veery.Import.Triggers {
+    /// <summary>
+    /// Represents a trigger that can be enabled or disabled and can be linked to other objects.
+    /// </summary>
     public class Trigger : ImportObject, ITriggerable {
+        /// <summary>
+        /// Event that is triggered when the trigger is activated.
+        /// </summary>
         private event Action WhenTriggered = delegate { };
 
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="Trigger"/> is enabled or disabled.
+        /// </summary>
+        /// <value><c>true</c> if the trigger is enabled; otherwise, <c>false</c>.</value>
         private bool Enabled { get; set; }
+
+        /// <summary>
+        /// Gets the list of <see cref="TriggerLink"/>  associated with this trigger.
+        /// </summary>
         private List<TriggerLink> Links { get; } = new();
 
+        /// <summary>
+        /// Initializes the trigger by loading deferred game objects.
+        /// </summary>
+        /// <returns>A task that represents the asynchronous operation. The task result contains a value indicating whether the initialization was successful.</returns>
         public Task<bool> Init() {
             LoadDeferredGOs();
 
