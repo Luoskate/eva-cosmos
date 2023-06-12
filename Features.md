@@ -2,19 +2,21 @@
 
 ## Saisie des éléments avec la gâchette (main)
 
+En pointant vers en objet, vous pouvez appuyer sur la gâchette (HandTrigger) de la main pointant vers l’objet pour l'attraper. Temps que vous maintenez enfoncé, l’objet suivra vos mouvements comme si vous le teniez dans votre main.
+
 ## Sélection avec la gâchette (index)
+
+En pointant vers en objet, vous pouvez appuyer sur la gâchette de votre index (IndexTrigger) pour le sélectionner.
+Une fois l’objet sélectionné, vous verrez apparaître, au-dessus de votre manette gauche, son menu contenant ses propriétés.
+Vous pouvez également déplacer un objet sélectionné à l’aide de votre joystick droit.
 
 ## Redimensionnement avec les deux manettes
 
-## Affichage des propriétés des éléments sélectionnés
-
-## Importation d'area trigger
+En grabbant, comme expliqué au-dessus, un objet avec les deux manettes en même temps, vous pouvez le redimensionner en écartant ou rapetissant l’écart entre vos mains.
 
 ## Liaison du trigger avec un objet
 
-(sélection de l'objet avec la manette gauche, puis sélection de l'area trigger avec la manette droite en maintenant le joystick) : index trigger gauche → sélectionner l'objet, joystick droit + index trigger droit sur le trigger.
-
-Les objets liés sont désactivés lorsque le casque entre dans l'area trigger.
+Lorsque vous choisissez un déclencheur à l'aide de la manette droite, ses propriétés apparaissent dans le menu de la manette gauche, sous l'onglet de sélection. Vous pouvez accéder aux propriétés OnTrigger et OnEnd, par exemple, pour un déclencheur de zone. Lorsque vous modifiez la propriété OnTrigger, cela affiche les différents liens disponibles. Vous pouvez ensuite en ajouter en cliquant sur "Ajouter un lien". Cela ouvrira un nouveau panneau vous permettant de choisir les méthodes à lier à ce déclencheur. Il vous suffit de sélectionner un objet à l'aide de la deuxième manette pour afficher les méthodes pouvant être modifiées. Quand vous créez un nouveau lien ou en choisissez un, les paramètres de la fonction liée sont affichés, vous permettant de les configurer selon l'action souhaitée.
 
 ## Ancres
 
