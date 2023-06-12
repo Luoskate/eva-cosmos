@@ -1,0 +1,5 @@
+<map id="Veery.UI.HandMenuController.ChangeParent" name="Veery.UI.HandMenuController.ChangeParent">
+<area shape="rect" id="node1" title="Changes the parent of the menu controller based on the active Controller and Handedness." alt="" coords="249,37,445,77"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_u_i_1_1_hand_menu_controller.html#a11eb2e2041d0482dbe1761b526214318" title=" " alt="" coords="5,5,201,45"/>
+<area shape="rect" id="node3" href="$class_veery_1_1_u_i_1_1_hand_menu_controller.html#a3eee1e90be7261a077303b97dd13e92e" title=" " alt="" coords="5,69,201,109"/>
+</map>

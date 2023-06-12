@@ -1,7 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$class_i_colliders_ref.html" title=" " alt="" coords="23,5,119,31"/>
-<area shape="rect" id="node2" href="$class_e_v_a_1_1_interaction_1_1_distance_select_interactable.html" title=" " alt="" coords="184,73,351,113"/>
-<area shape="rect" id="node3" href="$class_i_relative_to_ref.html" title=" " alt="" coords="17,55,125,80"/>
-<area shape="rect" id="node4" href="$class_i_rigidbody_ref.html" title=" " alt="" coords="19,104,122,129"/>
-<area shape="rect" id="node5" href="$class_pointer_interactable.html" title=" " alt="" coords="5,153,136,179"/>
+<area shape="rect" id="node1" href="$class_i_grabbable.html" title=" " alt="" coords="24,5,109,31"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_interaction_1_1_grabbable.html" title=" " alt="" coords="176,31,357,56"/>
+<area shape="rect" id="node3" href="$class_pointable_element.html" title=" " alt="" coords="5,55,128,80"/>
 </map>

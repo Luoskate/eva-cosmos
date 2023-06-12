@@ -1,0 +1,9 @@
+<map id="Veery.Interaction.DistanceSelectInteractable" name="Veery.Interaction.DistanceSelectInteractable">
+<area shape="rect" id="node1" title="Allows the user to select and interact with this object from a distance using the DistanceSelectInter..." alt="" coords="323,151,496,191"/>
+<area shape="rect" id="node2" href="$class_pointer_interactable.html" title=" " alt="" coords="5,5,197,60"/>
+<area shape="rect" id="node3" href="$class_i_rigidbody_ref.html" title=" " alt="" coords="50,84,153,109"/>
+<area shape="rect" id="node4" href="$class_i_relative_to_ref.html" title=" " alt="" coords="47,133,155,159"/>
+<area shape="rect" id="node5" href="$class_i_colliders_ref.html" title=" " alt="" coords="53,183,149,208"/>
+<area shape="rect" id="node6" title=" " alt="" coords="62,232,141,257"/>
+<area shape="rect" id="node7" title=" " alt="" coords="61,281,142,307"/>
+</map>

@@ -1,0 +1,22 @@
+<map id="Veery.Import.Model3D" name="Veery.Import.Model3D">
+<area shape="rect" id="node1" title="Represents a 3D model that can be imported into the scene." alt="" coords="1008,419,1157,444"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_import_1_1_import_object.html" title="Represents an object that can be imported into the scene." alt="" coords="697,419,795,444"/>
+<area shape="rect" id="node3" title=" " alt="" coords="353,260,465,285"/>
+<area shape="rect" id="node16" href="$class_veery_1_1_interaction_1_1_interactable_outline.html" title="This class provides an outline effect for an interactable object. It listens to the state changes of ..." alt="" coords="651,186,841,226"/>
+<area shape="rect" id="node4" href="$interface_veery_1_1_import_1_1_properties_1_1_i_enableable.html" title="Interface for objects that can be enabled or disabled." alt="" coords="365,571,454,596"/>
+<area shape="rect" id="node5" title=" " alt="" coords="340,407,479,432"/>
+<area shape="rect" id="node6" href="$class_veery_1_1_interaction_1_1_distance_select_interactable.html" title="Allows the user to select and interact with this object from a distance using the DistanceSelectInter..." alt="" coords="323,457,496,497"/>
+<area shape="rect" id="node7" href="$class_pointer_interactable.html" title=" " alt="" coords="5,312,197,367"/>
+<area shape="rect" id="node8" href="$class_i_rigidbody_ref.html" title=" " alt="" coords="50,391,153,416"/>
+<area shape="rect" id="node9" href="$class_i_relative_to_ref.html" title=" " alt="" coords="47,440,155,465"/>
+<area shape="rect" id="node10" href="$class_i_colliders_ref.html" title=" " alt="" coords="53,489,149,515"/>
+<area shape="rect" id="node11" title=" " alt="" coords="62,539,141,564"/>
+<area shape="rect" id="node12" title=" " alt="" coords="61,588,142,613"/>
+<area shape="rect" id="node13" title=" " alt="" coords="362,521,457,547"/>
+<area shape="rect" id="node14" title=" " alt="" coords="386,343,433,368"/>
+<area shape="rect" id="node15" title=" " alt="" coords="685,468,807,493"/>
+<area shape="rect" id="node17" title=" " alt="" coords="378,5,441,31"/>
+<area shape="rect" id="node18" title=" " alt="" coords="383,65,435,91"/>
+<area shape="rect" id="node19" title=" " alt="" coords="386,124,433,149"/>
+<area shape="rect" id="node20" title=" " alt="" coords="348,173,471,199"/>
+</map>

@@ -1,0 +1,8 @@
+<map id="Veery.UI.CollapseButton" name="Veery.UI.CollapseButton">
+<area shape="rect" id="node1" title="Represents a button that can collapse or open a list of Collapsable components." alt="" coords="199,108,361,133"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,117,31"/>
+<area shape="rect" id="node3" title=" " alt="" coords="141,5,200,31"/>
+<area shape="rect" id="node4" title=" " alt="" coords="252,5,308,31"/>
+<area shape="rect" id="node5" title=" " alt="" coords="351,5,537,31"/>
+<area shape="rect" id="node6" title=" " alt="" coords="561,5,660,31"/>
+</map>

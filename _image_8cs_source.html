@@ -10,14 +10,14 @@
 <meta name="description" content="EVA Cosmos is a VR app that lets creators build virtual art galleries. Visit them and experience art like never before!">
 <!-- BEGIN opengraph metadata -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://eva-cosmos.upsilonbox.fr/">
+<meta property="og:url" content="https://luoskate.github.io/eva-cosmos/">
 <meta property="og:title" content="EVA Cosmos - The Ultimate VR Art Gallery Creator">
 <meta property="og:description" content="EVA Cosmos is a VR app that lets creators build virtual art galleries. Visit them and experience art like never before!">
-<meta property="og:image" content="https://eva-cosmos.upsilonbox.fr/social-background.jpg">
+<meta property="og:image" content="https://luoskate.github.io/eva-cosmos/social-background.jpg">
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://eva-cosmos.upsilonbox.fr/">
+<meta property="twitter:url" content="https://luoskate.github.io/eva-cosmos/">
 <meta property="twitter:title" content="EVA Cosmos - The Ultimate VR Art Gallery Creator">
 <meta property="twitter:description" content="EVA Cosmos is a VR app that lets creators build virtual art galleries. Visit them and experience art like never before!">
 <meta property="twitter:image" content="https://eva-cosmos.upsilonbox.fr/social-background.jpg">
@@ -59,7 +59,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo-512x512.png"/></td>
   <td id="projectalign">
-   <div id="projectname">EVA Cosmos<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">EVA Cosmos<span id="projectnumber">&#160;0.2</span>
    </div>
    <div id="projectbrief">Meta Quest 2 Art Gallery Creator</div>
   </td>
@@ -127,53 +127,51 @@ $(document).ready(function(){initNavTree('_image_8cs_source.html',''); initResiz
   <div class="headertitle"><div class="title">Image.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_image_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Threading.Tasks;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span>UnityEngine.Networking;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="namespace_e_v_a_1_1_import.html">    6</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_e_v_a_1_1_import.html">EVA.Import</a> {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="class_e_v_a_1_1_import_1_1_image.html">   12</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_e_v_a_1_1_import_1_1_image.html">Image</a> : MonoBehaviour {</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">        #region Serialized Fields</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>        [SerializeField]</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="class_e_v_a_1_1_import_1_1_image.html#ac4e8dfe134911390d1dfeac4985999f0">   15</a></span>        <span class="keyword">private</span> Renderer <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_image.html#ac4e8dfe134911390d1dfeac4985999f0">_renderer</a>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>        [SerializeField]</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="class_e_v_a_1_1_import_1_1_image.html#aad9b4a0df26b881a590d2fcf7926c944">   18</a></span>        <span class="keyword">private</span> List&lt;GameObject&gt; <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_image.html#aad9b4a0df26b881a590d2fcf7926c944">_deferredGOs</a> = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">        #endregion Serialized Fields</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">        #region Methods</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_e_v_a_1_1_import_1_1_image.html#aef755cda753f1053a4296df919f11ffb">   29</a></span>        <span class="keyword">public</span> async Task&lt;bool&gt; <a class="code hl_function" href="class_e_v_a_1_1_import_1_1_image.html#aef755cda753f1053a4296df919f11ffb">Init</a>(<span class="keywordtype">string</span> url) {</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            <span class="comment">// Load the image</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            <span class="keyword">using </span>UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(url);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            UnityWebRequestAsyncOperation request = uwr.SendWebRequest();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            TaskCompletionSource&lt;bool&gt; tcs = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            request.completed += (AsyncOperation _) =&gt; tcs.SetResult(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            _ = await tcs.Task;</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>            <span class="keywordflow">if</span> (uwr.result != UnityWebRequest.Result.Success) {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                Debug.LogWarning($<span class="stringliteral">&quot;[{GetType().Name}] GetTexture() | Error while downloading: {uwr.error}&quot;</span>);</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            }</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            Texture2D texture = DownloadHandlerTexture.GetContent(uwr);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_image.html#ac4e8dfe134911390d1dfeac4985999f0">_renderer</a>.GetComponent&lt;Renderer&gt;().material.mainTexture = texture;</div>
+<a href="_image_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Threading.Tasks;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine.Networking;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="namespace_veery_1_1_import.html">    5</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_veery_1_1_import.html">Veery.Import</a> {</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="class_veery_1_1_import_1_1_image.html">    9</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_veery_1_1_import_1_1_image.html">Image</a> : <a class="code hl_class" href="class_veery_1_1_import_1_1_import_object.html">ImportObject</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">        #region Serialized Fields</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>        [SerializeField]</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [Tooltip(<span class="stringliteral">&quot;The Renderer component of the image.&quot;</span>)]</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_veery_1_1_import_1_1_image.html#af4a5c8e9f170bad8dcaf1256abc591d8">   16</a></span>        <span class="keyword">private</span> Renderer <a class="code hl_variable" href="class_veery_1_1_import_1_1_image.html#af4a5c8e9f170bad8dcaf1256abc591d8">_renderer</a>;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">        #endregion Serialized Fields</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">        #region Methods</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_veery_1_1_import_1_1_image.html#a3bcaee8668f755b0aaaa9ef708cc0840">   25</a></span>        <span class="keyword">public</span> async Task&lt;bool&gt; <a class="code hl_function" href="class_veery_1_1_import_1_1_image.html#a3bcaee8668f755b0aaaa9ef708cc0840">Init</a>(<span class="keywordtype">string</span> url) {</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>            <span class="comment">// Load the image</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>            <span class="keyword">using </span>UnityWebRequest uwr = UnityWebRequestTexture.GetTexture(url);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            UnityWebRequestAsyncOperation request = uwr.SendWebRequest();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            TaskCompletionSource&lt;bool&gt; tcs = <span class="keyword">new</span>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>            request.completed += (AsyncOperation _) =&gt; tcs.SetResult(<span class="keyword">true</span>);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>            _ = await tcs.Task;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <span class="keywordflow">if</span> (uwr.result != UnityWebRequest.Result.Success) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>                Debug.LogWarning($<span class="stringliteral">&quot;[{GetType().Name}] GetTexture() | Error while downloading: {uwr.error}&quot;</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            Texture2D texture = DownloadHandlerTexture.GetContent(uwr);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <a class="code hl_variable" href="class_veery_1_1_import_1_1_image.html#af4a5c8e9f170bad8dcaf1256abc591d8">_renderer</a>.GetComponent&lt;Renderer&gt;().material.mainTexture = texture;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <a class="code hl_property" href="class_veery_1_1_import_1_1_import_object.html#a0ee02f3b6e8377b47fee2d7e88568b3e">Url</a> = url;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            <a class="code hl_function" href="class_veery_1_1_import_1_1_import_object.html#adf06504c5261e1d6bb5e120ae3442a69">LoadDeferredGOs</a>();</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="comment">// Activate all deferred game objects</span></div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            foreach (GameObject go in <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_image.html#aad9b4a0df26b881a590d2fcf7926c944">_deferredGOs</a>) {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>                go.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            }</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span><span class="preprocessor">        #endregion Methods</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>}</div>
-<div class="ttc" id="aclass_e_v_a_1_1_import_1_1_image_html"><div class="ttname"><a href="class_e_v_a_1_1_import_1_1_image.html">EVA.Import.Image</a></div><div class="ttdoc">Manipulate an image in the scene.</div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00012">Image.cs:12</a></div></div>
-<div class="ttc" id="aclass_e_v_a_1_1_import_1_1_image_html_aad9b4a0df26b881a590d2fcf7926c944"><div class="ttname"><a href="class_e_v_a_1_1_import_1_1_image.html#aad9b4a0df26b881a590d2fcf7926c944">EVA.Import.Image._deferredGOs</a></div><div class="ttdeci">List&lt; GameObject &gt; _deferredGOs</div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00018">Image.cs:18</a></div></div>
-<div class="ttc" id="aclass_e_v_a_1_1_import_1_1_image_html_ac4e8dfe134911390d1dfeac4985999f0"><div class="ttname"><a href="class_e_v_a_1_1_import_1_1_image.html#ac4e8dfe134911390d1dfeac4985999f0">EVA.Import.Image._renderer</a></div><div class="ttdeci">Renderer _renderer</div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00015">Image.cs:15</a></div></div>
-<div class="ttc" id="aclass_e_v_a_1_1_import_1_1_image_html_aef755cda753f1053a4296df919f11ffb"><div class="ttname"><a href="class_e_v_a_1_1_import_1_1_image.html#aef755cda753f1053a4296df919f11ffb">EVA.Import.Image.Init</a></div><div class="ttdeci">async Task&lt; bool &gt; Init(string url)</div><div class="ttdoc">Loads the image and activates all deferred GameObject.</div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00029">Image.cs:29</a></div></div>
-<div class="ttc" id="anamespace_e_v_a_1_1_import_html"><div class="ttname"><a href="namespace_e_v_a_1_1_import.html">EVA.Import</a></div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00006">Image.cs:6</a></div></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span><span class="preprocessor">        #endregion Methods</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>}</div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_image_html"><div class="ttname"><a href="class_veery_1_1_import_1_1_image.html">Veery.Import.Image</a></div><div class="ttdoc">Represents an image that can be imported into the game.</div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00009">Image.cs:9</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_image_html_a3bcaee8668f755b0aaaa9ef708cc0840"><div class="ttname"><a href="class_veery_1_1_import_1_1_image.html#a3bcaee8668f755b0aaaa9ef708cc0840">Veery.Import.Image.Init</a></div><div class="ttdeci">async Task&lt; bool &gt; Init(string url)</div><div class="ttdoc">Initializes the image by downloading it from the specified URL and setting it as the main texture of ...</div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00025">Image.cs:25</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_image_html_af4a5c8e9f170bad8dcaf1256abc591d8"><div class="ttname"><a href="class_veery_1_1_import_1_1_image.html#af4a5c8e9f170bad8dcaf1256abc591d8">Veery.Import.Image._renderer</a></div><div class="ttdeci">Renderer _renderer</div><div class="ttdoc">The Renderer component of the image.</div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00016">Image.cs:16</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_import_object_html"><div class="ttname"><a href="class_veery_1_1_import_1_1_import_object.html">Veery.Import.ImportObject</a></div><div class="ttdoc">Represents an object that can be imported into the scene.</div><div class="ttdef"><b>Definition:</b> <a href="_import_object_8cs_source.html#l00013">ImportObject.cs:13</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_import_object_html_a0ee02f3b6e8377b47fee2d7e88568b3e"><div class="ttname"><a href="class_veery_1_1_import_1_1_import_object.html#a0ee02f3b6e8377b47fee2d7e88568b3e">Veery.Import.ImportObject.Url</a></div><div class="ttdeci">string Url</div><div class="ttdoc">Gets or sets the URL of the object to be imported.</div><div class="ttdef"><b>Definition:</b> <a href="_import_object_8cs_source.html#l00027">ImportObject.cs:27</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_import_object_html_adf06504c5261e1d6bb5e120ae3442a69"><div class="ttname"><a href="class_veery_1_1_import_1_1_import_object.html#adf06504c5261e1d6bb5e120ae3442a69">Veery.Import.ImportObject.LoadDeferredGOs</a></div><div class="ttdeci">void LoadDeferredGOs()</div><div class="ttdoc">Activates all deferred game objects.</div><div class="ttdef"><b>Definition:</b> <a href="_import_object_8cs_source.html#l00102">ImportObject.cs:102</a></div></div>
+<div class="ttc" id="anamespace_veery_1_1_import_html"><div class="ttname"><a href="namespace_veery_1_1_import.html">Veery.Import</a></div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00005">Image.cs:5</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

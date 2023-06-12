@@ -1,0 +1,9 @@
+<map id="Veery.UI.FileExplorerManager" name="Veery.UI.FileExplorerManager">
+<area shape="rect" id="node1" title="The FileExplorerManager is responsible for managing ALL file explorers (FileExplorerController)...." alt="" coords="609,107,801,132"/>
+<area shape="rect" id="node2" title=" " alt="" coords="316,5,428,31"/>
+<area shape="rect" id="node3" title=" " alt="" coords="345,55,399,80"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,153,100,179"/>
+<area shape="rect" id="node7" href="$class_veery_1_1_u_i_1_1_file_explorer_manager_1_1_import_prefabs.html" title=" " alt="" coords="275,181,469,221"/>
+<area shape="rect" id="node5" href="$class_veery_1_1_u_i_1_1_file_explorer_manager_1_1_icon_definition.html" title="Represents an icon definition used in the file explorer." alt="" coords="275,265,469,305"/>
+<area shape="rect" id="node6" title=" " alt="" coords="12,304,93,329"/>
+</map>

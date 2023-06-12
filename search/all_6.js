@@ -1,14 +1,16 @@
 var searchData=
 [
-  ['fileexplorercontroller_0',['FileExplorerController',['../class_e_v_a_1_1_u_i_1_1_file_explorer_controller.html',1,'EVA.UI.FileExplorerController'],['../class_e_v_a_1_1_u_i_1_1_file_explorer_element_controller.html#ab6e9f74dcd3b0bb8ac19c159882a2554',1,'EVA.UI.FileExplorerElementController.FileExplorerController()']]],
-  ['fileexplorercontroller_2ecs_1',['FileExplorerController.cs',['../_file_explorer_controller_8cs.html',1,'']]],
-  ['fileexplorerelementcontroller_2',['FileExplorerElementController',['../class_e_v_a_1_1_u_i_1_1_file_explorer_element_controller.html',1,'EVA::UI']]],
-  ['fileexplorerelementcontroller_2ecs_3',['FileExplorerElementController.cs',['../_file_explorer_element_controller_8cs.html',1,'']]],
-  ['fileexplorermanager_4',['FileExplorerManager',['../class_e_v_a_1_1_u_i_1_1_file_explorer_manager.html',1,'EVA.UI.FileExplorerManager'],['../class_e_v_a_1_1_u_i_1_1_file_explorer_controller.html#a5dbcefe3364e50a4b4452e82bea66645',1,'EVA.UI.FileExplorerController.FileExplorerManager()']]],
-  ['fileexplorermanager_2ecs_5',['FileExplorerManager.cs',['../_file_explorer_manager_8cs.html',1,'']]],
-  ['fileextentiondefinitions_6',['FileExtentionDefinitions',['../class_e_v_a_1_1_u_i_1_1_file_explorer_manager.html#ab0ab15eee66eb87f764ad8444abc6193',1,'EVA::UI::FileExplorerManager']]],
-  ['filenamedefinitions_7',['FileNameDefinitions',['../class_e_v_a_1_1_u_i_1_1_file_explorer_manager.html#ab33632e60f2b5bf141798788d047ebfc',1,'EVA::UI::FileExplorerManager']]],
-  ['filesysteminfo_8',['FileSystemInfo',['../class_e_v_a_1_1_u_i_1_1_file_explorer_element_controller.html#a4b46379642befb2fa57464ba92828471',1,'EVA::UI::FileExplorerElementController']]],
-  ['folderdefinitions_9',['FolderDefinitions',['../class_e_v_a_1_1_u_i_1_1_file_explorer_manager.html#a15a9d943b6aaa49c38e03ca6ff441a35',1,'EVA::UI::FileExplorerManager']]],
-  ['folderextendeddefinitions_10',['FolderExtendedDefinitions',['../class_e_v_a_1_1_u_i_1_1_file_explorer_manager.html#a3648448db5a996ac86fc8441a3935edb',1,'EVA::UI::FileExplorerManager']]]
+  ['features_2emd_0',['Features.md',['../_features_8md.html',1,'']]],
+  ['fileexplorercontroller_1',['FileExplorerController',['../class_veery_1_1_u_i_1_1_file_explorer_element_controller.html#a85e37bb6ab36f96b323a0f2b623c132c',1,'Veery.UI.FileExplorerElementController.FileExplorerController()'],['../class_veery_1_1_u_i_1_1_file_explorer_controller.html',1,'Veery.UI.FileExplorerController']]],
+  ['fileexplorercontroller_2ecs_2',['FileExplorerController.cs',['../_file_explorer_controller_8cs.html',1,'']]],
+  ['fileexplorerelementcontroller_3',['FileExplorerElementController',['../class_veery_1_1_u_i_1_1_file_explorer_element_controller.html',1,'Veery::UI']]],
+  ['fileexplorerelementcontroller_2ecs_4',['FileExplorerElementController.cs',['../_file_explorer_element_controller_8cs.html',1,'']]],
+  ['fileexplorermanager_5',['FileExplorerManager',['../class_veery_1_1_u_i_1_1_file_explorer_controller.html#afa453981c9079967f9de672d4dc841a4',1,'Veery.UI.FileExplorerController.FileExplorerManager()'],['../class_veery_1_1_u_i_1_1_file_explorer_manager.html',1,'Veery.UI.FileExplorerManager']]],
+  ['fileexplorermanager_2ecs_6',['FileExplorerManager.cs',['../_file_explorer_manager_8cs.html',1,'']]],
+  ['fileextensiondefinitions_7',['FileExtensionDefinitions',['../class_veery_1_1_u_i_1_1_file_explorer_manager.html#a48390ef3b1ddda046c4c9c29c9565190',1,'Veery::UI::FileExplorerManager']]],
+  ['filenamedefinitions_8',['FileNameDefinitions',['../class_veery_1_1_u_i_1_1_file_explorer_manager.html#aec06a20d3631489dc0b3a17c80e250e2',1,'Veery::UI::FileExplorerManager']]],
+  ['filesysteminfo_9',['FileSystemInfo',['../class_veery_1_1_u_i_1_1_file_explorer_element_controller.html#a6ea77d3149e0af893fd87653566a1e88',1,'Veery::UI::FileExplorerElementController']]],
+  ['folderdefinitions_10',['FolderDefinitions',['../class_veery_1_1_u_i_1_1_file_explorer_manager.html#a6c54b9d0252a4f6633c25cf89b68386b',1,'Veery::UI::FileExplorerManager']]],
+  ['folderextendeddefinitions_11',['FolderExtendedDefinitions',['../class_veery_1_1_u_i_1_1_file_explorer_manager.html#a40e882655f6a191136e38d53b3bc2778',1,'Veery::UI::FileExplorerManager']]],
+  ['fonctionnalités_12',['Fonctionnalités',['../md__features.html',1,'']]]
 ];

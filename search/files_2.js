@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['distancegrabinteractor_2ecs_0',['DistanceGrabInteractor.cs',['../_distance_grab_interactor_8cs.html',1,'']]],
-  ['distanceselectinteractable_2ecs_1',['DistanceSelectInteractable.cs',['../_distance_select_interactable_8cs.html',1,'']]],
-  ['distanceselectinteractor_2ecs_2',['DistanceSelectInteractor.cs',['../_distance_select_interactor_8cs.html',1,'']]]
+  ['collapsable_2ecs_0',['Collapsable.cs',['../_collapsable_8cs.html',1,'']]],
+  ['collapsebutton_2ecs_1',['CollapseButton.cs',['../_collapse_button_8cs.html',1,'']]]
 ];

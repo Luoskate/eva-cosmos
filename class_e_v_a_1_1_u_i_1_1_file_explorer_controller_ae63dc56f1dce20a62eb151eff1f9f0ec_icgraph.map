@@ -1,4 +1,0 @@
-<map id="EVA.UI.FileExplorerController.OpenFolder" name="EVA.UI.FileExplorerController.OpenFolder">
-<area shape="rect" id="node1" title="Open the selected folder." alt="" coords="236,5,429,45"/>
-<area shape="rect" id="node2" href="$class_e_v_a_1_1_u_i_1_1_file_explorer_element_controller.html#a35914131ada6b9141a144caac1f2f02c" title="Called when the user clicks on the element. If the element is a folder, it will open the it (using Fi..." alt="" coords="5,5,188,45"/>
-</map>

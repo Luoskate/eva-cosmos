@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['distancegrabinteractor_0',['DistanceGrabInteractor',['../class_e_v_a_1_1_interaction_1_1_distance_grab_interactor.html',1,'EVA::Interaction']]],
-  ['distanceselectinteractable_1',['DistanceSelectInteractable',['../class_e_v_a_1_1_interaction_1_1_distance_select_interactable.html',1,'EVA::Interaction']]],
-  ['distanceselectinteractor_2',['DistanceSelectInteractor',['../class_e_v_a_1_1_interaction_1_1_distance_select_interactor.html',1,'EVA::Interaction']]]
+  ['collapsable_0',['Collapsable',['../class_veery_1_1_u_i_1_1_collapsable.html',1,'Veery::UI']]],
+  ['collapsebutton_1',['CollapseButton',['../class_veery_1_1_u_i_1_1_collapse_button.html',1,'Veery::UI']]]
 ];

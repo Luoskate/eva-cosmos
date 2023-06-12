@@ -1,0 +1,9 @@
+<map id="Veery.Interaction.InteractableOutline" name="Veery.Interaction.InteractableOutline">
+<area shape="rect" id="node1" title="This class provides an outline effect for an interactable object. It listens to the state changes of ..." alt="" coords="205,108,395,148"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,117,31"/>
+<area shape="rect" id="node3" title=" " alt="" coords="187,5,250,31"/>
+<area shape="rect" id="node4" title=" " alt="" coords="274,5,326,31"/>
+<area shape="rect" id="node5" title=" " alt="" coords="378,5,425,31"/>
+<area shape="rect" id="node6" title=" " alt="" coords="449,5,572,31"/>
+<area shape="rect" id="node7" title=" " alt="" coords="617,5,663,31"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Veery.Anchors.AnchorsManager.Select" name="Veery.Anchors.AnchorsManager.Select">
+<area shape="rect" id="node1" title="Called when the state of the distance select interactor changes to &quot;Select&quot;. Sets the current interac..." alt="" coords="264,5,475,45"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_anchors_1_1_anchors_manager.html#a26098d886f7b561ec7e01a871df64b37" title=" " alt="" coords="5,5,216,45"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="Veery.UI.Selection.SelectionProperties" name="Veery.UI.Selection.SelectionProperties">
+<area shape="rect" id="node1" title=" " alt="" coords="832,262,1019,302"/>
+<area shape="rect" id="node2" title=" " alt="" coords="60,5,172,31"/>
+<area shape="rect" id="node7" href="$class_veery_1_1_interaction_1_1_distance_select_interactor.html" title="An interactor that selects interactables based on their distance from the interactor&#39;s pointer." alt="" coords="445,146,619,186"/>
+<area shape="rect" id="node3" href="$struct_veery_1_1_u_i_1_1_selection_1_1_selection_properties_1_1_selection_prefab.html" title=" " alt="" coords="439,342,625,382"/>
+<area shape="rect" id="node4" title=" " alt="" coords="89,329,143,355"/>
+<area shape="rect" id="node6" href="$struct_veery_1_1_u_i_1_1_selection_1_1_selection_properties_1_1_parameter_prefab.html" title=" " alt="" coords="439,262,625,302"/>
+<area shape="rect" id="node5" title=" " alt="" coords="69,395,163,420"/>
+<area shape="rect" id="node8" href="$class_pointer_interactor.html" title=" " alt="" coords="20,249,212,304"/>
+<area shape="rect" id="node9" href="$class_i_distance_interactor.html" title=" " alt="" coords="50,72,182,97"/>
+<area shape="rect" id="node10" title=" " alt="" coords="75,121,157,147"/>
+<area shape="rect" id="node11" title=" " alt="" coords="5,171,227,225"/>
+</map>

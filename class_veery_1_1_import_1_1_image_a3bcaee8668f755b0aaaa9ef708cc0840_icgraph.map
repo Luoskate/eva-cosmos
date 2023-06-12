@@ -1,0 +1,4 @@
+<map id="Veery.Import.Image.Init" name="Veery.Import.Image.Init">
+<area shape="rect" id="node1" title="Initializes the image by downloading it from the specified URL and setting it as the main texture of ..." alt="" coords="248,13,403,38"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_u_i_1_1_file_explorer_manager.html#aa290e58d935fc5068e287e909196704a" title="Imports a file into the scene." alt="" coords="5,5,200,45"/>
+</map>

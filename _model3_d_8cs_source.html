@@ -10,14 +10,14 @@
 <meta name="description" content="EVA Cosmos is a VR app that lets creators build virtual art galleries. Visit them and experience art like never before!">
 <!-- BEGIN opengraph metadata -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://eva-cosmos.upsilonbox.fr/">
+<meta property="og:url" content="https://luoskate.github.io/eva-cosmos/">
 <meta property="og:title" content="EVA Cosmos - The Ultimate VR Art Gallery Creator">
 <meta property="og:description" content="EVA Cosmos is a VR app that lets creators build virtual art galleries. Visit them and experience art like never before!">
-<meta property="og:image" content="https://eva-cosmos.upsilonbox.fr/social-background.jpg">
+<meta property="og:image" content="https://luoskate.github.io/eva-cosmos/social-background.jpg">
 <!-- END opengraph metadata -->
 <!-- BEGIN twitter metadata -->
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://eva-cosmos.upsilonbox.fr/">
+<meta property="twitter:url" content="https://luoskate.github.io/eva-cosmos/">
 <meta property="twitter:title" content="EVA Cosmos - The Ultimate VR Art Gallery Creator">
 <meta property="twitter:description" content="EVA Cosmos is a VR app that lets creators build virtual art galleries. Visit them and experience art like never before!">
 <meta property="twitter:image" content="https://eva-cosmos.upsilonbox.fr/social-background.jpg">
@@ -59,7 +59,7 @@
  <tr id="projectrow">
   <td id="projectlogo"><img alt="Logo" src="logo-512x512.png"/></td>
   <td id="projectalign">
-   <div id="projectname">EVA Cosmos<span id="projectnumber">&#160;0.1</span>
+   <div id="projectname">EVA Cosmos<span id="projectnumber">&#160;0.2</span>
    </div>
    <div id="projectbrief">Meta Quest 2 Art Gallery Creator</div>
   </td>
@@ -127,61 +127,55 @@ $(document).ready(function(){initNavTree('_model3_d_8cs_source.html',''); initRe
   <div class="headertitle"><div class="title">Model3D.cs</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="_model3_d_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Collections.Generic;</div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>System.Linq;</div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>System.Threading.Tasks;</div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_e_v_a_1_1_interaction.html">EVA.Interaction</a>;</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_e_v_a_1_1_u_i.html">EVA.UI</a>;</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">using </span>GLTFast;</div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>Oculus.Interaction;</div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>UnityEngine;</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_e_v_a_1_1_import.html">EVA.Import</a> {</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_e_v_a_1_1_import_1_1_model3_d.html">   16</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_e_v_a_1_1_import_1_1_model3_d.html">Model3D</a> : MonoBehaviour {</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">        #region Serialized Fields</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        [SerializeField]</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_e_v_a_1_1_import_1_1_model3_d.html#ad8c9d77f757cd7b0b9a2b4ea941fdcb1">   19</a></span>        <span class="keyword">private</span> GltfBoundsAsset <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_model3_d.html#ad8c9d77f757cd7b0b9a2b4ea941fdcb1">_gltfBoundsAsset</a>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        [SerializeField]</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_e_v_a_1_1_import_1_1_model3_d.html#a14c1910037e5455fa635fc7cb75e78ca">   22</a></span>        <span class="keyword">private</span> <a class="code hl_class" href="class_e_v_a_1_1_interaction_1_1_interactable_outline.html">InteractableOutline</a> <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_model3_d.html#a14c1910037e5455fa635fc7cb75e78ca">_interactableOutline</a>;</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        [SerializeField]</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_e_v_a_1_1_import_1_1_model3_d.html#a6050c9d77253f0f4d4d609e4ed761809">   25</a></span>        <span class="keyword">private</span> List&lt;GameObject&gt; <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_model3_d.html#a6050c9d77253f0f4d4d609e4ed761809">_deferredGOs</a> = <span class="keyword">new</span>();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">        #endregion Serialized Fields</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">        #region Methods</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_e_v_a_1_1_import_1_1_model3_d.html#a39cda977e756a56f413f4b8b56354220">   37</a></span>        <span class="keyword">public</span> async Task&lt;bool&gt; <a class="code hl_function" href="class_e_v_a_1_1_import_1_1_model3_d.html#a39cda977e756a56f413f4b8b56354220">Init</a>(<span class="keywordtype">string</span> url) {</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>            <span class="comment">// Load 3D model</span></div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordtype">bool</span> success = await <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_model3_d.html#ad8c9d77f757cd7b0b9a2b4ea941fdcb1">_gltfBoundsAsset</a>.Load(url);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            <span class="keywordflow">if</span> (!success) {</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                Debug.LogWarning($<span class="stringliteral">&quot;[{GetType().Name}] Init() | Error while importing: {url} as {name}&quot;</span>);</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>            }</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            Outline outline = <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_model3_d.html#ad8c9d77f757cd7b0b9a2b4ea941fdcb1">_gltfBoundsAsset</a>.gameObject.AddComponent&lt;Outline&gt;();</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_model3_d.html#a14c1910037e5455fa635fc7cb75e78ca">_interactableOutline</a>.<a class="code hl_function" href="class_e_v_a_1_1_interaction_1_1_interactable_outline.html#a7c9b9b64449b7a76abc5ae193a0c92d7">InjectOutline</a>(outline);</div>
+<a href="_model3_d_8cs.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">using </span>System.Threading.Tasks;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">using </span>GLTFast;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">using </span><a class="code hl_namespace" href="namespace_veery_1_1_interaction.html">Veery.Interaction</a>;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_veery_1_1_import.html">Veery.Import</a> {</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="class_veery_1_1_import_1_1_model3_d.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_veery_1_1_import_1_1_model3_d.html">Model3D</a> : <a class="code hl_class" href="class_veery_1_1_import_1_1_import_object.html">ImportObject</a> {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">        #region Serialized Fields</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        [SerializeField]</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        [Tooltip(<span class="stringliteral">&quot;The GLTFBoundsAsset component of the 3D model.&quot;</span>)]</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_veery_1_1_import_1_1_model3_d.html#a3b80eb799929c7f8afd5cb1299b6b35b">   17</a></span>        <span class="keyword">private</span> GltfBoundsAsset <a class="code hl_variable" href="class_veery_1_1_import_1_1_model3_d.html#a3b80eb799929c7f8afd5cb1299b6b35b">_gltfBoundsAsset</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        [SerializeField]</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        [Tooltip(<span class="stringliteral">&quot;The InteractableOutline component of the 3D model.&quot;</span>)]</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_veery_1_1_import_1_1_model3_d.html#abe3219a3fccfaed1412f904898769e6f">   24</a></span>        <span class="keyword">private</span> <a class="code hl_class" href="class_veery_1_1_interaction_1_1_interactable_outline.html">InteractableOutline</a> <a class="code hl_variable" href="class_veery_1_1_import_1_1_model3_d.html#abe3219a3fccfaed1412f904898769e6f">_interactableOutline</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">        #endregion Serialized Fields</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">        #region Methods</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="class_veery_1_1_import_1_1_model3_d.html#a7abb9ddb03e66e71ebe9bc2304a428b2">   33</a></span>        <span class="keyword">public</span> async Task&lt;bool&gt; <a class="code hl_function" href="class_veery_1_1_import_1_1_model3_d.html#a7abb9ddb03e66e71ebe9bc2304a428b2">Init</a>(<span class="keywordtype">string</span> url) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="comment">// Load 3D model</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            <span class="keywordtype">bool</span> success = await <a class="code hl_variable" href="class_veery_1_1_import_1_1_model3_d.html#a3b80eb799929c7f8afd5cb1299b6b35b">_gltfBoundsAsset</a>.Load(url);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <span class="keywordflow">if</span> (!success) {</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>                Debug.LogWarning($<span class="stringliteral">&quot;[{GetType().Name}] Init() | Error while importing: {url} as {name}&quot;</span>);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            }</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            Outline outline = <a class="code hl_variable" href="class_veery_1_1_import_1_1_model3_d.html#a3b80eb799929c7f8afd5cb1299b6b35b">_gltfBoundsAsset</a>.gameObject.AddComponent&lt;Outline&gt;();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            <a class="code hl_variable" href="class_veery_1_1_import_1_1_model3_d.html#abe3219a3fccfaed1412f904898769e6f">_interactableOutline</a>.<a class="code hl_function" href="class_veery_1_1_interaction_1_1_interactable_outline.html#a073dcd79a07f5cc2f6dc0c8c89b6c6b0">InjectOutline</a>(outline);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <a class="code hl_property" href="class_veery_1_1_import_1_1_import_object.html#a0ee02f3b6e8377b47fee2d7e88568b3e">Url</a> = url;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            <a class="code hl_function" href="class_veery_1_1_import_1_1_import_object.html#adf06504c5261e1d6bb5e120ae3442a69">LoadDeferredGOs</a>();</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="comment">// Activate all deferred game objects</span></div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">foreach</span> (GameObject go <span class="keywordflow">in</span> <a class="code hl_variable" href="class_e_v_a_1_1_import_1_1_model3_d.html#a6050c9d77253f0f4d4d609e4ed761809">_deferredGOs</a>) {</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                go.SetActive(<span class="keyword">true</span>);</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            }</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        }</div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="preprocessor">        #endregion Methods</span></div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    }</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>}</div>
-<div class="ttc" id="aclass_e_v_a_1_1_import_1_1_model3_d_html"><div class="ttname"><a href="class_e_v_a_1_1_import_1_1_model3_d.html">EVA.Import.Model3D</a></div><div class="ttdoc">Manipulate a 3D model in the scene.</div><div class="ttdef"><b>Definition:</b> <a href="_model3_d_8cs_source.html#l00016">Model3D.cs:16</a></div></div>
-<div class="ttc" id="aclass_e_v_a_1_1_import_1_1_model3_d_html_a14c1910037e5455fa635fc7cb75e78ca"><div class="ttname"><a href="class_e_v_a_1_1_import_1_1_model3_d.html#a14c1910037e5455fa635fc7cb75e78ca">EVA.Import.Model3D._interactableOutline</a></div><div class="ttdeci">InteractableOutline _interactableOutline</div><div class="ttdef"><b>Definition:</b> <a href="_model3_d_8cs_source.html#l00022">Model3D.cs:22</a></div></div>
-<div class="ttc" id="aclass_e_v_a_1_1_import_1_1_model3_d_html_a39cda977e756a56f413f4b8b56354220"><div class="ttname"><a href="class_e_v_a_1_1_import_1_1_model3_d.html#a39cda977e756a56f413f4b8b56354220">EVA.Import.Model3D.Init</a></div><div class="ttdeci">async Task&lt; bool &gt; Init(string url)</div><div class="ttdoc">Loads the GltfBoundsAsset and activates all deferred GameObject.</div><div class="ttdef"><b>Definition:</b> <a href="_model3_d_8cs_source.html#l00037">Model3D.cs:37</a></div></div>
-<div class="ttc" id="aclass_e_v_a_1_1_import_1_1_model3_d_html_a6050c9d77253f0f4d4d609e4ed761809"><div class="ttname"><a href="class_e_v_a_1_1_import_1_1_model3_d.html#a6050c9d77253f0f4d4d609e4ed761809">EVA.Import.Model3D._deferredGOs</a></div><div class="ttdeci">List&lt; GameObject &gt; _deferredGOs</div><div class="ttdef"><b>Definition:</b> <a href="_model3_d_8cs_source.html#l00025">Model3D.cs:25</a></div></div>
-<div class="ttc" id="aclass_e_v_a_1_1_import_1_1_model3_d_html_ad8c9d77f757cd7b0b9a2b4ea941fdcb1"><div class="ttname"><a href="class_e_v_a_1_1_import_1_1_model3_d.html#ad8c9d77f757cd7b0b9a2b4ea941fdcb1">EVA.Import.Model3D._gltfBoundsAsset</a></div><div class="ttdeci">GltfBoundsAsset _gltfBoundsAsset</div><div class="ttdef"><b>Definition:</b> <a href="_model3_d_8cs_source.html#l00019">Model3D.cs:19</a></div></div>
-<div class="ttc" id="aclass_e_v_a_1_1_interaction_1_1_interactable_outline_html"><div class="ttname"><a href="class_e_v_a_1_1_interaction_1_1_interactable_outline.html">EVA.Interaction.InteractableOutline</a></div><div class="ttdef"><b>Definition:</b> <a href="_interactable_outline_8cs_source.html#l00005">InteractableOutline.cs:5</a></div></div>
-<div class="ttc" id="aclass_e_v_a_1_1_interaction_1_1_interactable_outline_html_a7c9b9b64449b7a76abc5ae193a0c92d7"><div class="ttname"><a href="class_e_v_a_1_1_interaction_1_1_interactable_outline.html#a7c9b9b64449b7a76abc5ae193a0c92d7">EVA.Interaction.InteractableOutline.InjectOutline</a></div><div class="ttdeci">void InjectOutline(Outline outline)</div><div class="ttdef"><b>Definition:</b> <a href="_interactable_outline_8cs_source.html#l00092">InteractableOutline.cs:92</a></div></div>
-<div class="ttc" id="anamespace_e_v_a_1_1_import_html"><div class="ttname"><a href="namespace_e_v_a_1_1_import.html">EVA.Import</a></div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00006">Image.cs:6</a></div></div>
-<div class="ttc" id="anamespace_e_v_a_1_1_interaction_html"><div class="ttname"><a href="namespace_e_v_a_1_1_interaction.html">EVA.Interaction</a></div><div class="ttdef"><b>Definition:</b> <a href="_advanced_controller_selector_8cs_source.html#l00006">AdvancedControllerSelector.cs:6</a></div></div>
-<div class="ttc" id="anamespace_e_v_a_1_1_u_i_html"><div class="ttname"><a href="namespace_e_v_a_1_1_u_i.html">EVA.UI</a></div><div class="ttdef"><b>Definition:</b> <a href="_collapsable_8cs_source.html#l00003">Collapsable.cs:3</a></div></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        }</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span><span class="preprocessor">        #endregion Methods</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_import_object_html"><div class="ttname"><a href="class_veery_1_1_import_1_1_import_object.html">Veery.Import.ImportObject</a></div><div class="ttdoc">Represents an object that can be imported into the scene.</div><div class="ttdef"><b>Definition:</b> <a href="_import_object_8cs_source.html#l00013">ImportObject.cs:13</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_import_object_html_a0ee02f3b6e8377b47fee2d7e88568b3e"><div class="ttname"><a href="class_veery_1_1_import_1_1_import_object.html#a0ee02f3b6e8377b47fee2d7e88568b3e">Veery.Import.ImportObject.Url</a></div><div class="ttdeci">string Url</div><div class="ttdoc">Gets or sets the URL of the object to be imported.</div><div class="ttdef"><b>Definition:</b> <a href="_import_object_8cs_source.html#l00027">ImportObject.cs:27</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_import_object_html_adf06504c5261e1d6bb5e120ae3442a69"><div class="ttname"><a href="class_veery_1_1_import_1_1_import_object.html#adf06504c5261e1d6bb5e120ae3442a69">Veery.Import.ImportObject.LoadDeferredGOs</a></div><div class="ttdeci">void LoadDeferredGOs()</div><div class="ttdoc">Activates all deferred game objects.</div><div class="ttdef"><b>Definition:</b> <a href="_import_object_8cs_source.html#l00102">ImportObject.cs:102</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_model3_d_html"><div class="ttname"><a href="class_veery_1_1_import_1_1_model3_d.html">Veery.Import.Model3D</a></div><div class="ttdoc">Represents a 3D model that can be imported into the scene.</div><div class="ttdef"><b>Definition:</b> <a href="_model3_d_8cs_source.html#l00010">Model3D.cs:10</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_model3_d_html_a3b80eb799929c7f8afd5cb1299b6b35b"><div class="ttname"><a href="class_veery_1_1_import_1_1_model3_d.html#a3b80eb799929c7f8afd5cb1299b6b35b">Veery.Import.Model3D._gltfBoundsAsset</a></div><div class="ttdeci">GltfBoundsAsset _gltfBoundsAsset</div><div class="ttdoc">The GLTFBoundsAsset component of the 3D model.</div><div class="ttdef"><b>Definition:</b> <a href="_model3_d_8cs_source.html#l00017">Model3D.cs:17</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_model3_d_html_a7abb9ddb03e66e71ebe9bc2304a428b2"><div class="ttname"><a href="class_veery_1_1_import_1_1_model3_d.html#a7abb9ddb03e66e71ebe9bc2304a428b2">Veery.Import.Model3D.Init</a></div><div class="ttdeci">async Task&lt; bool &gt; Init(string url)</div><div class="ttdoc">Initializes the 3D model by loading it from the specified URL and setting up its components.</div><div class="ttdef"><b>Definition:</b> <a href="_model3_d_8cs_source.html#l00033">Model3D.cs:33</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_import_1_1_model3_d_html_abe3219a3fccfaed1412f904898769e6f"><div class="ttname"><a href="class_veery_1_1_import_1_1_model3_d.html#abe3219a3fccfaed1412f904898769e6f">Veery.Import.Model3D._interactableOutline</a></div><div class="ttdeci">InteractableOutline _interactableOutline</div><div class="ttdoc">The InteractableOutline component of the 3D model.</div><div class="ttdef"><b>Definition:</b> <a href="_model3_d_8cs_source.html#l00024">Model3D.cs:24</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_interaction_1_1_interactable_outline_html"><div class="ttname"><a href="class_veery_1_1_interaction_1_1_interactable_outline.html">Veery.Interaction.InteractableOutline</a></div><div class="ttdoc">This class provides an outline effect for an interactable object. It listens to the state changes of ...</div><div class="ttdef"><b>Definition:</b> <a href="_interactable_outline_8cs_source.html#l00008">InteractableOutline.cs:8</a></div></div>
+<div class="ttc" id="aclass_veery_1_1_interaction_1_1_interactable_outline_html_a073dcd79a07f5cc2f6dc0c8c89b6c6b0"><div class="ttname"><a href="class_veery_1_1_interaction_1_1_interactable_outline.html#a073dcd79a07f5cc2f6dc0c8c89b6c6b0">Veery.Interaction.InteractableOutline.InjectOutline</a></div><div class="ttdeci">void InjectOutline(Outline outline)</div><div class="ttdef"><b>Definition:</b> <a href="_interactable_outline_8cs_source.html#l00126">InteractableOutline.cs:126</a></div></div>
+<div class="ttc" id="anamespace_veery_1_1_import_html"><div class="ttname"><a href="namespace_veery_1_1_import.html">Veery.Import</a></div><div class="ttdef"><b>Definition:</b> <a href="_image_8cs_source.html#l00005">Image.cs:5</a></div></div>
+<div class="ttc" id="anamespace_veery_1_1_interaction_html"><div class="ttname"><a href="namespace_veery_1_1_interaction.html">Veery.Interaction</a></div><div class="ttdef"><b>Definition:</b> <a href="_advanced_controller_selector_8cs_source.html#l00006">AdvancedControllerSelector.cs:6</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

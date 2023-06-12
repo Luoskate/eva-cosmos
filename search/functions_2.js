@@ -1,8 +1,9 @@
 var searchData=
 [
-  ['changeparent_0',['ChangeParent',['../class_e_v_a_1_1_u_i_1_1_hand_menu_controller.html#a4e665f2b6fe3b309ee30f4d2e3317c40',1,'EVA::UI::HandMenuController']]],
-  ['close_1',['Close',['../class_e_v_a_1_1_u_i_1_1_main_menu_controller.html#a5a4772a354c1d1ee919528ef6c4dc000',1,'EVA::UI::MainMenuController']]],
-  ['collapse_2',['Collapse',['../class_e_v_a_1_1_u_i_1_1_collapsable.html#a4cfdff2b49fcd9250e8c318265152223',1,'EVA::UI::Collapsable']]],
-  ['computecandidate_3',['ComputeCandidate',['../class_e_v_a_1_1_interaction_1_1_distance_select_interactor.html#a35b2c53d61a0dbc883816c6103ed0be8',1,'EVA::Interaction::DistanceSelectInteractor']]],
-  ['computepointerpose_4',['ComputePointerPose',['../class_e_v_a_1_1_interaction_1_1_distance_select_interactor.html#adc23a99d19551b2f51f09e99abc6e6ee',1,'EVA::Interaction::DistanceSelectInteractor']]]
+  ['changeparent_0',['ChangeParent',['../class_veery_1_1_u_i_1_1_hand_menu_controller.html#a730fe0a7619a2b57bdf5a5db39f0bcc5',1,'Veery::UI::HandMenuController']]],
+  ['clearui_1',['ClearUI',['../class_veery_1_1_u_i_1_1_selection_1_1_links.html#a8fcd336a36c0110373f8092538cc5f49',1,'Veery.UI.Selection.Links.ClearUI()'],['../class_veery_1_1_u_i_1_1_selection_1_1_methods.html#a2a575edadeff9722b3d9a0cf3e602b5f',1,'Veery.UI.Selection.Methods.ClearUI()'],['../class_veery_1_1_u_i_1_1_selection_1_1_selection_properties.html#af08ca913f19fa4ad6ab2f40b19517c18',1,'Veery.UI.Selection.SelectionProperties.ClearUI()']]],
+  ['close_2',['Close',['../class_veery_1_1_u_i_1_1_main_menu_controller.html#a61ebd68264a1a5e4284548ee7b82a915',1,'Veery::UI::MainMenuController']]],
+  ['collapse_3',['Collapse',['../class_veery_1_1_u_i_1_1_collapsable.html#abd0db3f8d30cc2656f5e7cfae9601c09',1,'Veery::UI::Collapsable']]],
+  ['computecandidate_4',['ComputeCandidate',['../class_veery_1_1_interaction_1_1_distance_select_interactor.html#ad3cf038418420a7807adc21fd2b29bbb',1,'Veery::Interaction::DistanceSelectInteractor']]],
+  ['computepointerpose_5',['ComputePointerPose',['../class_veery_1_1_interaction_1_1_distance_select_interactor.html#a285a99b49b920ad095648b1bc461ec1f',1,'Veery::Interaction::DistanceSelectInteractor']]]
 ];

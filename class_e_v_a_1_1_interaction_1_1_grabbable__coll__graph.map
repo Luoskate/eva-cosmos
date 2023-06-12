@@ -1,8 +1,0 @@
-<map id="EVA.Interaction.Grabbable" name="EVA.Interaction.Grabbable">
-<area shape="rect" id="node1" title=" " alt="" coords="199,123,374,148"/>
-<area shape="rect" id="node2" href="$class_pointable_element.html" title=" " alt="" coords="5,5,128,31"/>
-<area shape="rect" id="node3" href="$class_i_grabbable.html" title=" " alt="" coords="152,5,237,31"/>
-<area shape="rect" id="node4" title=" " alt="" coords="261,5,373,31"/>
-<area shape="rect" id="node5" title=" " alt="" coords="427,5,466,31"/>
-<area shape="rect" id="node6" title=" " alt="" coords="529,5,625,31"/>
-</map>

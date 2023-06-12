@@ -1,0 +1,11 @@
+<map id="Veery.Interaction.DistanceGrabInteractor" name="Veery.Interaction.DistanceGrabInteractor">
+<area shape="rect" id="node1" title="A custom implementation of the Oculus Interaction DistanceGrabInteractor that allows for optional sel..." alt="" coords="812,126,985,166"/>
+<area shape="rect" id="node2" title=" " alt="" coords="444,62,607,102"/>
+<area shape="rect" id="node3" href="$class_veery_1_1_interaction_1_1_distance_select_interactor.html" title="An interactor that selects interactables based on their distance from the interactor&#39;s pointer." alt="" coords="439,126,612,166"/>
+<area shape="rect" id="node4" href="$class_pointer_interactor.html" title=" " alt="" coords="20,5,212,60"/>
+<area shape="rect" id="node5" href="$class_i_distance_interactor.html" title=" " alt="" coords="50,84,182,109"/>
+<area shape="rect" id="node6" title=" " alt="" coords="60,133,172,159"/>
+<area shape="rect" id="node7" title=" " alt="" coords="75,193,157,219"/>
+<area shape="rect" id="node8" title=" " alt="" coords="5,243,227,297"/>
+<area shape="rect" id="node9" title=" " alt="" coords="502,191,549,216"/>
+</map>

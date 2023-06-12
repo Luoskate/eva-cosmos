@@ -1,7 +1,0 @@
-<map id="EVA.UI.FileExplorerController.SetElements" name="EVA.UI.FileExplorerController.SetElements">
-<area shape="rect" id="node1" title="Instantiate _explorerElementPrefab for each file / directory in the current folder and set the FileEx..." alt="" coords="477,69,671,109"/>
-<area shape="rect" id="node2" href="$class_e_v_a_1_1_u_i_1_1_file_explorer_controller.html#ae63dc56f1dce20a62eb151eff1f9f0ec" title="Open the selected folder." alt="" coords="236,5,429,45"/>
-<area shape="rect" id="node4" href="$class_e_v_a_1_1_u_i_1_1_file_explorer_controller.html#a79c69f64776633287e5b30296cce315d" title="Open the parent folder." alt="" coords="236,69,429,109"/>
-<area shape="rect" id="node5" href="$class_e_v_a_1_1_u_i_1_1_file_explorer_controller.html#aabf3d5015e2f6c7c7d7426c00173b6b8" title=" " alt="" coords="236,133,429,173"/>
-<area shape="rect" id="node3" href="$class_e_v_a_1_1_u_i_1_1_file_explorer_element_controller.html#a35914131ada6b9141a144caac1f2f02c" title="Called when the user clicks on the element. If the element is a folder, it will open the it (using Fi..." alt="" coords="5,5,188,45"/>
-</map>

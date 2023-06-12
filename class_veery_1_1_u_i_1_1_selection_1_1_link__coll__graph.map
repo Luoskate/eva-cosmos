@@ -1,0 +1,11 @@
+<map id="Veery.UI.Selection.Link" name="Veery.UI.Selection.Link">
+<area shape="rect" id="node1" title=" " alt="" coords="623,119,780,144"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_u_i_1_1_selection_1_1_selection_property.html" title=" " alt="" coords="293,5,417,31"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,11,117,36"/>
+<area shape="rect" id="node7" href="$class_veery_1_1_import_1_1_triggers_1_1_trigger_link.html" title="Represents a link between two import objects that can trigger a delegate with parameters." alt="" coords="248,64,461,89"/>
+<area shape="rect" id="node4" title=" " alt="" coords="325,116,385,141"/>
+<area shape="rect" id="node5" title=" " alt="" coords="288,165,421,191"/>
+<area shape="rect" id="node6" title=" " alt="" coords="307,215,402,240"/>
+<area shape="rect" id="node8" title=" " alt="" coords="12,69,111,95"/>
+<area shape="rect" id="node9" title=" " alt="" coords="27,119,95,144"/>
+</map>

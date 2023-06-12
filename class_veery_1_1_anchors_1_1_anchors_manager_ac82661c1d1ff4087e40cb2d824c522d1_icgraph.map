@@ -1,0 +1,5 @@
+<map id="Veery.Anchors.AnchorsManager.OnLocalized" name="Veery.Anchors.AnchorsManager.OnLocalized">
+<area shape="rect" id="node1" title="Called when an OVRSpatialAnchor.UnboundAnchor is localized. Imports the model associated with the anc..." alt="" coords="523,5,733,45"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_anchors_1_1_anchors_manager.html#adf9b8272c001df6894ceac4570d34bd6" title="Binds all unbound anchors to their corresponding game objects. If an anchor is already localized,..." alt="" coords="264,5,475,45"/>
+<area shape="rect" id="node3" href="$class_veery_1_1_anchors_1_1_anchors_manager.html#a3b913ba272909bdd047404789b43c2fc" title="Loads all saved anchors and binds them to their corresponding game objects." alt="" coords="5,5,216,45"/>
+</map>

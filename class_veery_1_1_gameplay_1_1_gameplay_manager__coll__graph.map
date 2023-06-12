@@ -1,0 +1,7 @@
+<map id="Veery.Gameplay.GameplayManager" name="Veery.Gameplay.GameplayManager">
+<area shape="rect" id="node1" title="Manages gameplay&#45;related functionality, such as controller input and interactor management." alt="" coords="171,108,397,133"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,117,31"/>
+<area shape="rect" id="node3" title=" " alt="" coords="257,5,311,31"/>
+<area shape="rect" id="node4" title=" " alt="" coords="336,5,413,31"/>
+<area shape="rect" id="node5" title=" " alt="" coords="463,5,558,31"/>
+</map>

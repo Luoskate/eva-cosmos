@@ -1,0 +1,4 @@
+<map id="Veery.UI.FileExplorerController.OpenFolder" name="Veery.UI.FileExplorerController.OpenFolder">
+<area shape="rect" id="node1" title="Open the selected folder." alt="" coords="243,5,443,45"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_u_i_1_1_file_explorer_element_controller.html#ac2124d37d6f857c38af761d8912cfec5" title="Called when the user clicks on the element. If the element is a folder, it will open the it (using Fi..." alt="" coords="5,5,195,45"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Veery.Gameplay.GameplayManager.HandleActiveController" name="Veery.Gameplay.GameplayManager.HandleActiveController">
+<area shape="rect" id="node1" title="Manages the active controller and triggers the ControllerChanged event when the active controller cha..." alt="" coords="284,5,515,45"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_gameplay_1_1_gameplay_manager.html#a8433f8b874f7593ee97c6ad10ed89b93" title=" " alt="" coords="5,5,236,45"/>
+</map>

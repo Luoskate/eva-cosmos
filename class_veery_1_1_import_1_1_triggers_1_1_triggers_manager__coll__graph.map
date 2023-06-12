@@ -1,0 +1,13 @@
+<map id="Veery.Import.Triggers.TriggersManager" name="Veery.Import.Triggers.TriggersManager">
+<area shape="rect" id="node1" title="Manages all triggers in the scene." alt="" coords="773,239,968,279"/>
+<area shape="rect" id="node2" title=" " alt="" coords="60,5,172,31"/>
+<area shape="rect" id="node7" href="$class_veery_1_1_interaction_1_1_distance_select_interactor.html" title="An interactor that selects interactables based on their distance from the interactor&#39;s pointer." alt="" coords="449,137,623,177"/>
+<area shape="rect" id="node3" title=" " alt="" coords="509,220,563,245"/>
+<area shape="rect" id="node4" href="$class_veery_1_1_import_1_1_triggers_1_1_triggers_manager_1_1_triggers_prefabs.html" title="A container class for prefabs used to create different types of triggers." alt="" coords="439,333,633,373"/>
+<area shape="rect" id="node5" title=" " alt="" coords="69,325,163,351"/>
+<area shape="rect" id="node6" title=" " alt="" coords="503,397,569,423"/>
+<area shape="rect" id="node8" href="$class_pointer_interactor.html" title=" " alt="" coords="20,55,212,109"/>
+<area shape="rect" id="node9" href="$class_i_distance_interactor.html" title=" " alt="" coords="50,133,182,159"/>
+<area shape="rect" id="node10" title=" " alt="" coords="75,183,157,208"/>
+<area shape="rect" id="node11" title=" " alt="" coords="5,232,227,287"/>
+</map>

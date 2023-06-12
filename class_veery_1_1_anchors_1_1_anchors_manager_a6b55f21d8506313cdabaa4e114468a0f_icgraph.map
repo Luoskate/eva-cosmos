@@ -1,0 +1,5 @@
+<map id="Veery.Anchors.AnchorsManager.Erase" name="Veery.Anchors.AnchorsManager.Erase">
+<area shape="rect" id="node1" title="Called when the OVRSpatialAnchor component associated with the current interactable is erased...." alt="" coords="523,5,733,45"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_anchors_1_1_anchors_manager.html#a646d6cb0148c9f170abab2da3176306b" title="Called when the state of the distance select interactor changes to &quot;Select&quot;. Sets the current interac..." alt="" coords="264,5,475,45"/>
+<area shape="rect" id="node3" href="$class_veery_1_1_anchors_1_1_anchors_manager.html#a26098d886f7b561ec7e01a871df64b37" title=" " alt="" coords="5,5,216,45"/>
+</map>

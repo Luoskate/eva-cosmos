@@ -1,0 +1,7 @@
+<map id="Veery.UI.FileExplorerController.SetElements" name="Veery.UI.FileExplorerController.SetElements">
+<area shape="rect" id="node1" title="Instantiate _explorerElementPrefab for each file / directory in the current folder and set the FileEx..." alt="" coords="501,69,701,109"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_u_i_1_1_file_explorer_controller.html#a323f74e569f4a10f9ad3f20f95887267" title="Open the selected folder." alt="" coords="253,5,453,45"/>
+<area shape="rect" id="node4" href="$class_veery_1_1_u_i_1_1_file_explorer_controller.html#a7c0c10a8756873b5c556326c39ac64a6" title="Open the parent folder." alt="" coords="253,69,453,109"/>
+<area shape="rect" id="node5" href="$class_veery_1_1_u_i_1_1_file_explorer_controller.html#a98910455bfbf3c3b7e9453ac6b50cc0a" title=" " alt="" coords="5,97,205,137"/>
+<area shape="rect" id="node3" href="$class_veery_1_1_u_i_1_1_file_explorer_element_controller.html#ac2124d37d6f857c38af761d8912cfec5" title="Called when the user clicks on the element. If the element is a folder, it will open the it (using Fi..." alt="" coords="11,5,200,45"/>
+</map>

@@ -1,0 +1,11 @@
+<map id="Veery.Anchors.AnchorsManager" name="Veery.Anchors.AnchorsManager">
+<area shape="rect" id="node1" title="Manages the creation, deletion, and loading of spatial anchors." alt="" coords="731,145,937,171"/>
+<area shape="rect" id="node2" title=" " alt="" coords="60,5,172,31"/>
+<area shape="rect" id="node3" href="$class_veery_1_1_interaction_1_1_distance_select_interactor.html" title="An interactor that selects interactables based on their distance from the interactor&#39;s pointer." alt="" coords="439,109,612,149"/>
+<area shape="rect" id="node4" href="$class_pointer_interactor.html" title=" " alt="" coords="20,55,212,109"/>
+<area shape="rect" id="node5" href="$class_i_distance_interactor.html" title=" " alt="" coords="50,133,182,159"/>
+<area shape="rect" id="node6" title=" " alt="" coords="75,183,157,208"/>
+<area shape="rect" id="node7" title=" " alt="" coords="5,232,227,287"/>
+<area shape="rect" id="node8" title=" " alt="" coords="459,173,592,199"/>
+<area shape="rect" id="node9" title=" " alt="" coords="460,223,591,248"/>
+</map>

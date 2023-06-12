@@ -1,0 +1,4 @@
+<map id="Veery.UI.Collapsable.Collapse" name="Veery.UI.Collapsable.Collapse">
+<area shape="rect" id="node1" title="Toggles the collapsed state of the Collapsable object." alt="" coords="220,13,415,38"/>
+<area shape="rect" id="node2" href="$class_veery_1_1_u_i_1_1_collapse_button.html#a12cf58d56406e39aa18ea871bccc7415" title="Event handler for the button click event. Collapses or opens the collapsable components in the list." alt="" coords="5,5,172,45"/>
+</map>

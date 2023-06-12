@@ -1,8 +1,12 @@
 <map id="Assets/Scripts/EVA" name="Assets/Scripts/EVA">
-<area shape="rect" id="node2" href="dir_cc3ef265bd316fc62e6b5bbc719e7512.html" title="Gameplay" alt="" coords="291,63,371,88"/>
-<area shape="rect" id="node3" href="dir_bddd8f84b6ab73d223fd26a4966afffe.html" title="Import" alt="" coords="208,63,267,88"/>
-<area shape="rect" id="node4" href="dir_fea5e5b6b0f98d641e7cde08d3716618.html" title="Interaction" alt="" coords="101,63,184,88"/>
-<area shape="rect" id="node5" href="dir_5844d3c771d24ee3cb66498064feb591.html" title="UI" alt="" coords="38,63,77,88"/>
-<area shape="rect" id="clust2" href="dir_59b8786a165a368d012757b6b616e239.html" alt="" coords="27,52,453,99"/>
-<area shape="rect" id="clust1" href="dir_f13b41af88cf68434578284aaf699e39.html" title="Scripts" alt="" coords="16,16,464,109"/>
+<area shape="rect" id="node2" href="dir_bc837794642000c3c680e3199dd87e2a.html" title="Anchors" alt="" coords="249,73,319,99"/>
+<area shape="rect" id="node3" href="dir_cc3ef265bd316fc62e6b5bbc719e7512.html" title="Gameplay" alt="" coords="144,73,224,99"/>
+<area shape="rect" id="node5" href="dir_ccfd4388e5e7672c29157d283a640c74.html" title="Properties" alt="" coords="682,73,763,99"/>
+<area shape="rect" id="node6" href="dir_84479fe88e661f053a83f515dba5f55c.html" title="Triggers" alt="" coords="588,73,657,99"/>
+<area shape="rect" id="node7" href="dir_fea5e5b6b0f98d641e7cde08d3716618.html" title="Interaction" alt="" coords="37,73,120,99"/>
+<area shape="rect" id="node9" href="dir_fccbe0daad807216b831c8a2e11457b2.html" title="Selection" alt="" coords="417,73,493,99"/>
+<area shape="rect" id="clust3" href="dir_bddd8f84b6ab73d223fd26a4966afffe.html" alt="" coords="577,63,857,109"/>
+<area shape="rect" id="clust4" href="dir_5844d3c771d24ee3cb66498064feb591.html" alt="" coords="405,63,567,109"/>
+<area shape="rect" id="clust2" href="dir_59b8786a165a368d012757b6b616e239.html" alt="" coords="27,52,868,120"/>
+<area shape="rect" id="clust1" href="dir_f13b41af88cf68434578284aaf699e39.html" title="Scripts" alt="" coords="16,16,879,131"/>
 </map>

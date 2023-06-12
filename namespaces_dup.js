@@ -1,4 +1,4 @@
 var namespaces_dup =
 [
-    [ "EVA", "namespace_e_v_a.html", "namespace_e_v_a" ]
+    [ "Veery", "namespace_veery.html", "namespace_veery" ]
 ];
