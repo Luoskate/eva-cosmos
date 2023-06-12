@@ -46,10 +46,8 @@ var NAVTREE =
       [ "Saisie des éléments avec la gâchette (main)", "md__features.html#autotoc_md15", null ],
       [ "Sélection avec la gâchette (index)", "md__features.html#autotoc_md16", null ],
       [ "Redimensionnement avec les deux manettes", "md__features.html#autotoc_md17", null ],
-      [ "Affichage des propriétés des éléments sélectionnés", "md__features.html#autotoc_md18", null ],
-      [ "Importation d'area trigger", "md__features.html#autotoc_md19", null ],
-      [ "Liaison du trigger avec un objet", "md__features.html#autotoc_md20", null ],
-      [ "Ancres", "md__features.html#autotoc_md21", null ]
+      [ "Liaison du trigger avec un objet", "md__features.html#autotoc_md18", null ],
+      [ "Ancres", "md__features.html#autotoc_md19", null ]
     ] ],
     [ "Packages", "namespaces.html", [
       [ "Package List", "namespaces.html", "namespaces_dup" ]
@@ -79,7 +77,7 @@ var NAVTREEINDEX =
 "class_veery_1_1_import_1_1_triggers_1_1_trigger_link.html#a8a741ee27176d42a32f8b72f3b8b44f7",
 "class_veery_1_1_u_i_1_1_file_explorer_controller.html",
 "class_veery_1_1_u_i_1_1_selection_1_1_methods.html#a21a0023ff00f4fde95f1b93ee2ec27a4",
-"namespace_veery_1_1_u_i_1_1_selection.html"
+"pages.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

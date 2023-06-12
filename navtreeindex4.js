@@ -1,7 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"namespace_veery_1_1_u_i_1_1_selection.html":[3,0,0,4,0],
-"namespaces.html":[3,0],
 "pages.html":[],
 "struct_veery_1_1_u_i_1_1_selection_1_1_selection_properties_1_1_parameter_prefab.html":[3,0,0,4,0,8,0],
 "struct_veery_1_1_u_i_1_1_selection_1_1_selection_properties_1_1_parameter_prefab.html":[4,0,0,4,0,8,0],
